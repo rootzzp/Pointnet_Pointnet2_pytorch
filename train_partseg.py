@@ -301,5 +301,12 @@ def main(args):
 
 
 if __name__ == '__main__':
+    import sys
+    sys.argv = [
+        "train_partseg.py", 
+        "--model", "pointnet2_part_seg_msg", 
+        "--normal", 
+        "--log_dir", "pointnet2_part_seg_msg"
+    ]
     args = parse_args()
     main(args)
