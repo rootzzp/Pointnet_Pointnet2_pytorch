@@ -21,10 +21,7 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 ROOT_DIR = BASE_DIR
 sys.path.append(os.path.join(ROOT_DIR, 'models'))
 
-seg_classes = {'Earphone': [16, 17, 18], 'Motorbike': [30, 31, 32, 33, 34, 35], 'Rocket': [41, 42, 43],
-               'Car': [8, 9, 10, 11], 'Laptop': [28, 29], 'Cap': [6, 7], 'Skateboard': [44, 45, 46], 'Mug': [36, 37],
-               'Guitar': [19, 20, 21], 'Bag': [4, 5], 'Lamp': [24, 25, 26, 27], 'Table': [47, 48, 49],
-               'Airplane': [0, 1, 2, 3], 'Pistol': [38, 39, 40], 'Chair': [12, 13, 14, 15], 'Knife': [22, 23]}
+seg_classes = {'obj': [0,1,2,3,4,5,6]}
 seg_label_to_cat = {}  # {0:Airplane, 1:Airplane, ...49:Table}
 for cat in seg_classes.keys():
     for label in seg_classes[cat]:
@@ -98,7 +95,7 @@ def main(args):
     log_string('PARAMETER ...')
     log_string(args)
 
-    root = 'data/shapenetcore_partanno_segmentation_benchmark_v0_normal/'
+    root = 'data/custom/'
 
     TRAIN_DATASET = PartNormalDataset(root=root, npoints=args.npoint, split='trainval', normal_channel=args.normal)
     trainDataLoader = torch.utils.data.DataLoader(TRAIN_DATASET, batch_size=args.batch_size, shuffle=True, num_workers=10, drop_last=True)
@@ -107,8 +104,8 @@ def main(args):
     log_string("The number of training data is: %d" % len(TRAIN_DATASET))
     log_string("The number of test data is: %d" % len(TEST_DATASET))
 
-    num_classes = 16
-    num_part = 50
+    num_classes = 1
+    num_part = 7
 
     '''MODEL LOADING'''
     MODEL = importlib.import_module(args.model)
@@ -165,6 +162,7 @@ def main(args):
 
     for epoch in range(start_epoch, args.epoch):
         mean_correct = []
+        mean_loss = []
 
         log_string('Epoch %d (%d/%s):' % (global_epoch + 1, epoch + 1, args.epoch))
         '''Adjust learning rate and BN momentum'''
@@ -190,7 +188,7 @@ def main(args):
             points, label, target = points.float().cuda(), label.long().cuda(), target.long().cuda()
             points = points.transpose(2, 1)
 
-            seg_pred, trans_feat = classifier(points, to_categorical(label, num_classes))
+            seg_pred, trans_feat = classifier(points, to_categorical(label, num_classes)) #[bs,2048,7],[bs,1024,1]
             seg_pred = seg_pred.contiguous().view(-1, num_part)
             target = target.view(-1, 1)[:, 0]
             pred_choice = seg_pred.data.max(1)[1]
@@ -198,11 +196,13 @@ def main(args):
             correct = pred_choice.eq(target.data).cpu().sum()
             mean_correct.append(correct.item() / (args.batch_size * args.npoint))
             loss = criterion(seg_pred, target, trans_feat)
+            mean_loss.append(loss.item() / (args.batch_size))
             loss.backward()
             optimizer.step()
 
         train_instance_acc = np.mean(mean_correct)
-        log_string('Train accuracy is: %.5f' % train_instance_acc)
+        train_loss = np.mean(mean_loss)
+        log_string('Train accuracy is: {} loss is: {}'.format(train_instance_acc, train_loss))
 
         with torch.no_grad():
             test_metrics = {}
@@ -223,16 +223,15 @@ def main(args):
                 cur_batch_size, NUM_POINT, _ = points.size()
                 points, label, target = points.float().cuda(), label.long().cuda(), target.long().cuda()
                 points = points.transpose(2, 1)
-                seg_pred, _ = classifier(points, to_categorical(label, num_classes))
+                seg_pred, _ = classifier(points, to_categorical(label, num_classes)) # [bs,2048,7]
                 cur_pred_val = seg_pred.cpu().data.numpy()
                 cur_pred_val_logits = cur_pred_val
-                cur_pred_val = np.zeros((cur_batch_size, NUM_POINT)).astype(np.int32)
+                cur_pred_val = np.zeros((cur_batch_size, NUM_POINT)).astype(np.int32) #[bs,2048]
                 target = target.cpu().data.numpy()
 
                 for i in range(cur_batch_size):
-                    cat = seg_label_to_cat[target[i, 0]]
-                    logits = cur_pred_val_logits[i, :, :]
-                    cur_pred_val[i, :] = np.argmax(logits[:, seg_classes[cat]], 1) + seg_classes[cat][0]
+                    logits = cur_pred_val_logits[i, :, :] #[2048,7]
+                    cur_pred_val[i, :] = np.argmax(logits, 1)
 
                 correct = np.sum(cur_pred_val == target)
                 total_correct += correct
@@ -245,8 +244,8 @@ def main(args):
                 for i in range(cur_batch_size):
                     segp = cur_pred_val[i, :]
                     segl = target[i, :]
-                    cat = seg_label_to_cat[segl[0]]
-                    part_ious = [0.0 for _ in range(len(seg_classes[cat]))]
+                    cat = 'obj'
+                    part_ious = [0.0 for _ in range(num_part)]
                     for l in seg_classes[cat]:
                         if (np.sum(segl == l) == 0) and (
                                 np.sum(segp == l) == 0):  # part is not present, no prediction as well
@@ -264,14 +263,14 @@ def main(args):
             mean_shape_ious = np.mean(list(shape_ious.values()))
             test_metrics['accuracy'] = total_correct / float(total_seen)
             test_metrics['class_avg_accuracy'] = np.mean(
-                np.array(total_correct_class) / np.array(total_seen_class, dtype=np.float))
+                np.array(total_correct_class) / np.array(total_seen_class, dtype=np.float64))
             for cat in sorted(shape_ious.keys()):
                 log_string('eval mIoU of %s %f' % (cat + ' ' * (14 - len(cat)), shape_ious[cat]))
-            test_metrics['class_avg_iou'] = mean_shape_ious
+            # test_metrics['class_avg_iou'] = mean_shape_ious
             test_metrics['inctance_avg_iou'] = np.mean(all_shape_ious)
 
-        log_string('Epoch %d test Accuracy: %f  Class avg mIOU: %f   Inctance avg mIOU: %f' % (
-            epoch + 1, test_metrics['accuracy'], test_metrics['class_avg_iou'], test_metrics['inctance_avg_iou']))
+        log_string('Epoch %d test Accuracy: %f  Inctance avg mIOU: %f' % (
+            epoch + 1, test_metrics['accuracy'], test_metrics['inctance_avg_iou']))
         if (test_metrics['inctance_avg_iou'] >= best_inctance_avg_iou):
             logger.info('Save model...')
             savepath = str(checkpoints_dir) + '/best_model.pth'
@@ -280,7 +279,7 @@ def main(args):
                 'epoch': epoch,
                 'train_acc': train_instance_acc,
                 'test_acc': test_metrics['accuracy'],
-                'class_avg_iou': test_metrics['class_avg_iou'],
+                # 'class_avg_iou': test_metrics['class_avg_iou'],
                 'inctance_avg_iou': test_metrics['inctance_avg_iou'],
                 'model_state_dict': classifier.state_dict(),
                 'optimizer_state_dict': optimizer.state_dict(),
@@ -290,12 +289,12 @@ def main(args):
 
         if test_metrics['accuracy'] > best_acc:
             best_acc = test_metrics['accuracy']
-        if test_metrics['class_avg_iou'] > best_class_avg_iou:
-            best_class_avg_iou = test_metrics['class_avg_iou']
+        # if test_metrics['class_avg_iou'] > best_class_avg_iou:
+        #     best_class_avg_iou = test_metrics['class_avg_iou']
         if test_metrics['inctance_avg_iou'] > best_inctance_avg_iou:
             best_inctance_avg_iou = test_metrics['inctance_avg_iou']
         log_string('Best accuracy is: %.5f' % best_acc)
-        log_string('Best class avg mIOU is: %.5f' % best_class_avg_iou)
+        # log_string('Best class avg mIOU is: %.5f' % best_class_avg_iou)
         log_string('Best inctance avg mIOU is: %.5f' % best_inctance_avg_iou)
         global_epoch += 1
 
@@ -304,7 +303,7 @@ if __name__ == '__main__':
     import sys
     sys.argv = [
         "train_partseg.py", 
-        "--model", "pointnet2_part_seg_msg", 
+        "--model", "pointnet2_part_seg_custom", 
         "--normal", 
         "--log_dir", "pointnet2_part_seg_msg"
     ]

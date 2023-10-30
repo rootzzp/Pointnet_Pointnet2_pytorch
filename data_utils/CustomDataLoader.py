@@ -38,7 +38,7 @@ class PartNormalDataset(Dataset):
         self.part_labels = list(prefix_set)
         self.label2num = {}
         for i in range(len(self.part_labels)):
-            self.label2num[self.part_labels[i]] = i + 1
+            self.label2num[self.part_labels[i]] = i
 
         sizes = []
         keys = []
@@ -49,8 +49,10 @@ class PartNormalDataset(Dataset):
         self.max_part_label = keys[self.max_num_part_index]
 
         obj_num = sizes[self.max_num_part_index]
-        train_num = int(obj_num * (1-test_ratio))
-        test_num = obj_num - train_num
+        # train_num = int(obj_num * (1-test_ratio))
+        # test_num = obj_num - train_num
+        train_num = 50
+        test_num = 20
 
         self.datapath = []
 
@@ -60,13 +62,15 @@ class PartNormalDataset(Dataset):
                 suffix = t[1:-4]
                 self.process(suffix)
         elif split == 'test':
-            for i in range(train_num, obj_num, 1):
+            for i in range(train_num, train_num + test_num, 1):
                 t = self.all[self.max_part_label][i]
                 suffix = t[1:-4]
                 self.process(suffix)
 
         self.cache = {}  # from index to (point_set, cls, seg) tuple
         self.cache_size = 20000
+
+        self.edge_file = os.path.join(self.root,"edge.txt")
 
     def process(self,suffix,save_path="data/tmp"):
         save_file_path = os.path.join(save_path,"obj_"+suffix+".txt")
