@@ -4,7 +4,7 @@ Date: Nov 2019
 """
 import argparse
 import os
-from data_utils.ShapeNetDataLoader import PartNormalDataset
+from data_utils.CustomDataLoader_v2 import PartNormalDataset,label_to_color,points_to_pcd
 import torch
 import logging
 import sys
@@ -16,10 +16,7 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 ROOT_DIR = BASE_DIR
 sys.path.append(os.path.join(ROOT_DIR, 'models'))
 
-seg_classes = {'Earphone': [16, 17, 18], 'Motorbike': [30, 31, 32, 33, 34, 35], 'Rocket': [41, 42, 43],
-               'Car': [8, 9, 10, 11], 'Laptop': [28, 29], 'Cap': [6, 7], 'Skateboard': [44, 45, 46], 'Mug': [36, 37],
-               'Guitar': [19, 20, 21], 'Bag': [4, 5], 'Lamp': [24, 25, 26, 27], 'Table': [47, 48, 49],
-               'Airplane': [0, 1, 2, 3], 'Pistol': [38, 39, 40], 'Chair': [12, 13, 14, 15], 'Knife': [22, 23]}
+seg_classes = {'obj': [0,1]}
 
 seg_label_to_cat = {}  # {0:Airplane, 1:Airplane, ...49:Table}
 for cat in seg_classes.keys():
@@ -68,13 +65,13 @@ def main(args):
     log_string('PARAMETER ...')
     log_string(args)
 
-    root = 'data/shapenetcore_partanno_segmentation_benchmark_v0_normal/'
+    root = 'data/custom/pcds/'
 
     TEST_DATASET = PartNormalDataset(root=root, npoints=args.num_point, split='test', normal_channel=args.normal)
-    testDataLoader = torch.utils.data.DataLoader(TEST_DATASET, batch_size=args.batch_size, shuffle=False, num_workers=4)
+    testDataLoader = torch.utils.data.DataLoader(TEST_DATASET, batch_size=1, shuffle=False, num_workers=4)
     log_string("The number of test data is: %d" % len(TEST_DATASET))
-    num_classes = 16
-    num_part = 50
+    num_classes = 1
+    num_part = 2
 
     '''MODEL LOADING'''
     model_name = os.listdir(experiment_dir + '/logs')[0].split('.')[0]
@@ -116,13 +113,19 @@ def main(args):
             target = target.cpu().data.numpy()
 
             for i in range(cur_batch_size):
-                cat = seg_label_to_cat[target[i, 0]]
                 logits = cur_pred_val_logits[i, :, :]
-                cur_pred_val[i, :] = np.argmax(logits[:, seg_classes[cat]], 1) + seg_classes[cat][0]
+                cur_pred_val[i, :] = np.argmax(logits, 1)
 
             correct = np.sum(cur_pred_val == target)
             total_correct += correct
             total_seen += (cur_batch_size * NUM_POINT)
+
+            tmp = cur_pred_val[0]
+            tmp_point = points[0].transpose(0,1).cpu().data.numpy()
+            new_t = [label_to_color[a] for a in tmp]
+            new_t = np.array(new_t)
+            new_points = np.concatenate((tmp_point, new_t[:, np.newaxis]), axis=1)
+            points_to_pcd(new_points,"./data/"+"result_"+str(batch_id)+".pcd",True)
 
             for l in range(num_part):
                 total_seen_class[l] += np.sum(target == l)
@@ -131,7 +134,7 @@ def main(args):
             for i in range(cur_batch_size):
                 segp = cur_pred_val[i, :]
                 segl = target[i, :]
-                cat = seg_label_to_cat[segl[0]]
+                cat = 'obj'
                 part_ious = [0.0 for _ in range(len(seg_classes[cat]))]
                 for l in seg_classes[cat]:
                     if (np.sum(segl == l) == 0) and (
@@ -150,7 +153,7 @@ def main(args):
         mean_shape_ious = np.mean(list(shape_ious.values()))
         test_metrics['accuracy'] = total_correct / float(total_seen)
         test_metrics['class_avg_accuracy'] = np.mean(
-            np.array(total_correct_class) / np.array(total_seen_class, dtype=np.float))
+            np.array(total_correct_class) / np.array(total_seen_class, dtype=np.float64))
         for cat in sorted(shape_ious.keys()):
             log_string('eval mIoU of %s %f' % (cat + ' ' * (14 - len(cat)), shape_ious[cat]))
         test_metrics['class_avg_iou'] = mean_shape_ious
@@ -163,5 +166,11 @@ def main(args):
 
 
 if __name__ == '__main__':
+    import sys
+    sys.argv = [
+    "train_partseg.py",
+    "--normal",
+    "--log_dir", "pointnet2_part_seg_msg_custom"
+    ]
     args = parse_args()
     main(args)

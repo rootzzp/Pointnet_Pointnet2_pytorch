@@ -15,13 +15,13 @@ import numpy as np
 
 from pathlib import Path
 from tqdm import tqdm
-from data_utils.CustomDataLoader import PartNormalDataset
+from data_utils.CustomDataLoader_v2 import PartNormalDataset,generate_data,label_to_color,color_to_label,points_to_pcd
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 ROOT_DIR = BASE_DIR
 sys.path.append(os.path.join(ROOT_DIR, 'models'))
 
-seg_classes = {'obj': [0,1,2,3,4,5,6]}
+seg_classes = {'obj': [0,1]}
 seg_label_to_cat = {}  # {0:Airplane, 1:Airplane, ...49:Table}
 for cat in seg_classes.keys():
     for label in seg_classes[cat]:
@@ -44,8 +44,8 @@ def to_categorical(y, num_classes):
 def parse_args():
     parser = argparse.ArgumentParser('Model')
     parser.add_argument('--model', type=str, default='pointnet_part_seg', help='model name')
-    parser.add_argument('--batch_size', type=int, default=16, help='batch Size during training')
-    parser.add_argument('--epoch', default=251, type=int, help='epoch to run')
+    parser.add_argument('--batch_size', type=int, default=8, help='batch Size during training')
+    parser.add_argument('--epoch', default=240, type=int, help='epoch to run')
     parser.add_argument('--learning_rate', default=0.001, type=float, help='initial learning rate')
     parser.add_argument('--gpu', type=str, default='0', help='specify GPU devices')
     parser.add_argument('--optimizer', type=str, default='Adam', help='Adam or SGD')
@@ -53,7 +53,7 @@ def parse_args():
     parser.add_argument('--decay_rate', type=float, default=1e-4, help='weight decay')
     parser.add_argument('--npoint', type=int, default=2048, help='point Number')
     parser.add_argument('--normal', action='store_true', default=False, help='use normals')
-    parser.add_argument('--step_size', type=int, default=20, help='decay step for lr decay')
+    parser.add_argument('--step_size', type=int, default=30, help='decay step for lr decay')
     parser.add_argument('--lr_decay', type=float, default=0.5, help='decay rate for lr decay')
 
     return parser.parse_args()
@@ -95,17 +95,28 @@ def main(args):
     log_string('PARAMETER ...')
     log_string(args)
 
-    root = 'data/custom/'
+    root = 'data/custom/pcds/'
+    generate_data(root,generate_train_count=1000,generate_test_count=200)
 
     TRAIN_DATASET = PartNormalDataset(root=root, npoints=args.npoint, split='trainval', normal_channel=args.normal)
-    trainDataLoader = torch.utils.data.DataLoader(TRAIN_DATASET, batch_size=args.batch_size, shuffle=True, num_workers=10, drop_last=True)
+    trainDataLoader = torch.utils.data.DataLoader(TRAIN_DATASET, batch_size=args.batch_size, shuffle=True, num_workers=8, drop_last=True)
     TEST_DATASET = PartNormalDataset(root=root, npoints=args.npoint, split='test', normal_channel=args.normal)
-    testDataLoader = torch.utils.data.DataLoader(TEST_DATASET, batch_size=args.batch_size, shuffle=False, num_workers=10)
+    testDataLoader = torch.utils.data.DataLoader(TEST_DATASET, batch_size=args.batch_size, shuffle=False, num_workers=8)
     log_string("The number of training data is: %d" % len(TRAIN_DATASET))
     log_string("The number of test data is: %d" % len(TEST_DATASET))
 
+    # debug
+    # TRAIN_DATASET = PartNormalDataset(root=root, npoints=args.npoint, split='trainval', normal_channel=args.normal)
+    # trainDataLoader = torch.utils.data.DataLoader(TRAIN_DATASET, batch_size=1, shuffle=True, num_workers=1, drop_last=True)
+    # for i, (points, label, target) in tqdm(enumerate(trainDataLoader), total=len(trainDataLoader), smoothing=0.9):
+    #     t = target[0].numpy()
+    #     new_t = [label_to_color[a] for a in t]
+    #     new_t = np.array(new_t)
+    #     new_points = np.concatenate((points[0].numpy(), new_t[:, np.newaxis]), axis=1)
+    #     points_to_pcd(new_points,"./data/custom/train_"+str(i)+".pcd",True)
+
     num_classes = 1
-    num_part = 7
+    num_part = 2
 
     '''MODEL LOADING'''
     MODEL = importlib.import_module(args.model)
@@ -305,7 +316,7 @@ if __name__ == '__main__':
         "train_partseg.py", 
         "--model", "pointnet2_part_seg_custom", 
         "--normal", 
-        "--log_dir", "pointnet2_part_seg_msg"
+        "--log_dir", "pointnet2_part_seg_msg_custom"
     ]
     args = parse_args()
     main(args)
