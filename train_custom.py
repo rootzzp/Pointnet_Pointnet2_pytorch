@@ -51,7 +51,7 @@ def parse_args():
     parser.add_argument('--optimizer', type=str, default='Adam', help='Adam or SGD')
     parser.add_argument('--log_dir', type=str, default=None, help='log path')
     parser.add_argument('--decay_rate', type=float, default=1e-4, help='weight decay')
-    parser.add_argument('--npoint', type=int, default=2048, help='point Number')
+    parser.add_argument('--npoint', type=int, default=4096, help='point Number')
     parser.add_argument('--normal', action='store_true', default=False, help='use normals')
     parser.add_argument('--step_size', type=int, default=30, help='decay step for lr decay')
     parser.add_argument('--lr_decay', type=float, default=0.5, help='decay rate for lr decay')
@@ -96,12 +96,12 @@ def main(args):
     log_string(args)
 
     root = 'data/custom/pcds/'
-    generate_data(root,generate_train_count=1000,generate_test_count=200)
+    generate_data(root,generate_train_count=1000,generate_test_count=190)
 
     TRAIN_DATASET = PartNormalDataset(root=root, npoints=args.npoint, split='trainval', normal_channel=args.normal)
-    trainDataLoader = torch.utils.data.DataLoader(TRAIN_DATASET, batch_size=args.batch_size, shuffle=True, num_workers=8, drop_last=True)
+    trainDataLoader = torch.utils.data.DataLoader(TRAIN_DATASET, batch_size=args.batch_size, shuffle=True, num_workers=4, drop_last=True)
     TEST_DATASET = PartNormalDataset(root=root, npoints=args.npoint, split='test', normal_channel=args.normal)
-    testDataLoader = torch.utils.data.DataLoader(TEST_DATASET, batch_size=args.batch_size, shuffle=False, num_workers=8)
+    testDataLoader = torch.utils.data.DataLoader(TEST_DATASET, batch_size=args.batch_size, shuffle=False, num_workers=4)
     log_string("The number of training data is: %d" % len(TRAIN_DATASET))
     log_string("The number of test data is: %d" % len(TEST_DATASET))
 
@@ -316,7 +316,7 @@ if __name__ == '__main__':
         "train_partseg.py", 
         "--model", "pointnet2_part_seg_custom", 
         "--normal", 
-        "--log_dir", "pointnet2_part_seg_msg_custom"
+        "--log_dir", "pointnet2_part_seg_msg_custom_4096"
     ]
     args = parse_args()
     main(args)
