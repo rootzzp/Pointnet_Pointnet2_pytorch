@@ -1,0 +1,6 @@
+2023-11-05 20:22:30,340 - Model - INFO - PARAMETER ...
+2023-11-05 20:22:30,341 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg_custom_4096', normal=True, num_point=2048, num_votes=3)
+2023-11-05 20:22:30,343 - Model - INFO - The number of test data is: 190
+2023-11-05 20:26:00,702 - Model - INFO - PARAMETER ...
+2023-11-05 20:26:00,703 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg_custom_4096', normal=True, num_point=4096, num_votes=3)
+2023-11-05 20:26:00,705 - Model - INFO - The number of test data is: 190

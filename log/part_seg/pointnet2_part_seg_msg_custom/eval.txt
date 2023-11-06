@@ -1,0 +1,3 @@
+2023-11-05 20:19:07,810 - Model - INFO - PARAMETER ...
+2023-11-05 20:19:07,811 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg_custom', normal=True, num_point=2048, num_votes=3)
+2023-11-05 20:19:07,813 - Model - INFO - The number of test data is: 190

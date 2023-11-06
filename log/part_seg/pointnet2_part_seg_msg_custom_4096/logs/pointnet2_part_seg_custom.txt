@@ -1,0 +1,796 @@
+2023-11-05 10:17:35,879 - Model - INFO - PARAMETER ...
+2023-11-05 10:17:35,879 - Model - INFO - Namespace(batch_size=8, decay_rate=0.0001, epoch=240, gpu='0', learning_rate=0.001, log_dir='pointnet2_part_seg_msg_custom_4096', lr_decay=0.5, model='pointnet2_part_seg_custom', normal=True, npoint=4096, optimizer='Adam', step_size=30)
+2023-11-05 10:18:33,176 - Model - INFO - PARAMETER ...
+2023-11-05 10:18:33,176 - Model - INFO - Namespace(batch_size=8, decay_rate=0.0001, epoch=240, gpu='0', learning_rate=0.001, log_dir='pointnet2_part_seg_msg_custom_4096', lr_decay=0.5, model='pointnet2_part_seg_custom', normal=True, npoint=4096, optimizer='Adam', step_size=30)
+2023-11-05 10:18:33,295 - Model - INFO - The number of training data is: 1000
+2023-11-05 10:18:33,295 - Model - INFO - The number of test data is: 190
+2023-11-05 10:22:31,377 - Model - INFO - PARAMETER ...
+2023-11-05 10:22:31,377 - Model - INFO - Namespace(batch_size=8, decay_rate=0.0001, epoch=240, gpu='0', learning_rate=0.001, log_dir='pointnet2_part_seg_msg_custom_4096', lr_decay=0.5, model='pointnet2_part_seg_custom', normal=True, npoint=4096, optimizer='Adam', step_size=30)
+2023-11-05 10:22:31,485 - Model - INFO - The number of training data is: 1000
+2023-11-05 10:22:31,485 - Model - INFO - The number of test data is: 190
+2023-11-05 10:22:33,664 - Model - INFO - No existing model, starting training from scratch...
+2023-11-05 10:22:33,666 - Model - INFO - Epoch 1 (1/240):
+2023-11-05 10:22:33,666 - Model - INFO - Learning rate:0.001000
+2023-11-05 10:27:53,022 - Model - INFO - Train accuracy is: 0.76360205078125 loss is: 0.05874541366100311
+2023-11-05 10:28:55,527 - Model - INFO - eval mIoU of obj            0.540064
+2023-11-05 10:28:55,527 - Model - INFO - Epoch 1 test Accuracy: 0.804325  Inctance avg mIOU: 0.540064
+2023-11-05 10:28:55,527 - Model - INFO - Save model...
+2023-11-05 10:28:55,527 - Model - INFO - Saving at log/part_seg/pointnet2_part_seg_msg_custom_4096/checkpoints/best_model.pth
+2023-11-05 10:28:55,560 - Model - INFO - Saving model....
+2023-11-05 10:28:55,561 - Model - INFO - Best accuracy is: 0.80433
+2023-11-05 10:28:55,561 - Model - INFO - Best inctance avg mIOU is: 0.54006
+2023-11-05 10:28:55,561 - Model - INFO - Epoch 2 (2/240):
+2023-11-05 10:28:55,561 - Model - INFO - Learning rate:0.001000
+2023-11-05 10:33:53,164 - Model - INFO - Train accuracy is: 0.80313427734375 loss is: 0.05074955406785011
+2023-11-05 10:34:55,563 - Model - INFO - eval mIoU of obj            0.569421
+2023-11-05 10:34:55,563 - Model - INFO - Epoch 2 test Accuracy: 0.791184  Inctance avg mIOU: 0.569421
+2023-11-05 10:34:55,563 - Model - INFO - Save model...
+2023-11-05 10:34:55,563 - Model - INFO - Saving at log/part_seg/pointnet2_part_seg_msg_custom_4096/checkpoints/best_model.pth
+2023-11-05 10:34:55,616 - Model - INFO - Saving model....
+2023-11-05 10:34:55,617 - Model - INFO - Best accuracy is: 0.80433
+2023-11-05 10:34:55,617 - Model - INFO - Best inctance avg mIOU is: 0.56942
+2023-11-05 10:34:55,617 - Model - INFO - Epoch 3 (3/240):
+2023-11-05 10:34:55,617 - Model - INFO - Learning rate:0.001000
+2023-11-05 10:39:59,652 - Model - INFO - Train accuracy is: 0.814582275390625 loss is: 0.04793930813670158
+2023-11-05 10:41:01,725 - Model - INFO - eval mIoU of obj            0.563014
+2023-11-05 10:41:01,725 - Model - INFO - Epoch 3 test Accuracy: 0.819309  Inctance avg mIOU: 0.563014
+2023-11-05 10:41:01,725 - Model - INFO - Best accuracy is: 0.81931
+2023-11-05 10:41:01,725 - Model - INFO - Best inctance avg mIOU is: 0.56942
+2023-11-05 10:41:01,725 - Model - INFO - Epoch 4 (4/240):
+2023-11-05 10:41:01,725 - Model - INFO - Learning rate:0.001000
+2023-11-05 10:46:03,775 - Model - INFO - Train accuracy is: 0.823250244140625 loss is: 0.04636183097958565
+2023-11-05 10:47:06,565 - Model - INFO - eval mIoU of obj            0.605477
+2023-11-05 10:47:06,565 - Model - INFO - Epoch 4 test Accuracy: 0.831907  Inctance avg mIOU: 0.605477
+2023-11-05 10:47:06,565 - Model - INFO - Save model...
+2023-11-05 10:47:06,565 - Model - INFO - Saving at log/part_seg/pointnet2_part_seg_msg_custom_4096/checkpoints/best_model.pth
+2023-11-05 10:47:06,616 - Model - INFO - Saving model....
+2023-11-05 10:47:06,616 - Model - INFO - Best accuracy is: 0.83191
+2023-11-05 10:47:06,616 - Model - INFO - Best inctance avg mIOU is: 0.60548
+2023-11-05 10:47:06,616 - Model - INFO - Epoch 5 (5/240):
+2023-11-05 10:47:06,616 - Model - INFO - Learning rate:0.001000
+2023-11-05 10:52:07,547 - Model - INFO - Train accuracy is: 0.82917138671875 loss is: 0.04467933203279972
+2023-11-05 10:53:10,280 - Model - INFO - eval mIoU of obj            0.582687
+2023-11-05 10:53:10,280 - Model - INFO - Epoch 5 test Accuracy: 0.837969  Inctance avg mIOU: 0.582687
+2023-11-05 10:53:10,280 - Model - INFO - Best accuracy is: 0.83797
+2023-11-05 10:53:10,280 - Model - INFO - Best inctance avg mIOU is: 0.60548
+2023-11-05 10:53:10,280 - Model - INFO - Epoch 6 (6/240):
+2023-11-05 10:53:10,280 - Model - INFO - Learning rate:0.001000
+2023-11-05 10:58:14,492 - Model - INFO - Train accuracy is: 0.832007568359375 loss is: 0.044189365327358246
+2023-11-05 10:59:17,270 - Model - INFO - eval mIoU of obj            0.614013
+2023-11-05 10:59:17,270 - Model - INFO - Epoch 6 test Accuracy: 0.829457  Inctance avg mIOU: 0.614013
+2023-11-05 10:59:17,270 - Model - INFO - Save model...
+2023-11-05 10:59:17,270 - Model - INFO - Saving at log/part_seg/pointnet2_part_seg_msg_custom_4096/checkpoints/best_model.pth
+2023-11-05 10:59:17,319 - Model - INFO - Saving model....
+2023-11-05 10:59:17,319 - Model - INFO - Best accuracy is: 0.83797
+2023-11-05 10:59:17,319 - Model - INFO - Best inctance avg mIOU is: 0.61401
+2023-11-05 10:59:17,319 - Model - INFO - Epoch 7 (7/240):
+2023-11-05 10:59:17,319 - Model - INFO - Learning rate:0.001000
+2023-11-05 11:04:17,095 - Model - INFO - Train accuracy is: 0.83737646484375 loss is: 0.04284997428953648
+2023-11-05 11:05:19,799 - Model - INFO - eval mIoU of obj            0.570059
+2023-11-05 11:05:19,799 - Model - INFO - Epoch 7 test Accuracy: 0.833202  Inctance avg mIOU: 0.570059
+2023-11-05 11:05:19,799 - Model - INFO - Best accuracy is: 0.83797
+2023-11-05 11:05:19,799 - Model - INFO - Best inctance avg mIOU is: 0.61401
+2023-11-05 11:05:19,799 - Model - INFO - Epoch 8 (8/240):
+2023-11-05 11:05:19,799 - Model - INFO - Learning rate:0.001000
+2023-11-05 11:10:20,159 - Model - INFO - Train accuracy is: 0.842209716796875 loss is: 0.04182659861445427
+2023-11-05 11:11:22,576 - Model - INFO - eval mIoU of obj            0.604782
+2023-11-05 11:11:22,576 - Model - INFO - Epoch 8 test Accuracy: 0.837771  Inctance avg mIOU: 0.604782
+2023-11-05 11:11:22,576 - Model - INFO - Best accuracy is: 0.83797
+2023-11-05 11:11:22,576 - Model - INFO - Best inctance avg mIOU is: 0.61401
+2023-11-05 11:11:22,576 - Model - INFO - Epoch 9 (9/240):
+2023-11-05 11:11:22,576 - Model - INFO - Learning rate:0.001000
+2023-11-05 11:16:27,385 - Model - INFO - Train accuracy is: 0.845982666015625 loss is: 0.04077704165875912
+2023-11-05 11:17:30,215 - Model - INFO - eval mIoU of obj            0.649972
+2023-11-05 11:17:30,215 - Model - INFO - Epoch 9 test Accuracy: 0.854722  Inctance avg mIOU: 0.649972
+2023-11-05 11:17:30,215 - Model - INFO - Save model...
+2023-11-05 11:17:30,215 - Model - INFO - Saving at log/part_seg/pointnet2_part_seg_msg_custom_4096/checkpoints/best_model.pth
+2023-11-05 11:17:30,267 - Model - INFO - Saving model....
+2023-11-05 11:17:30,267 - Model - INFO - Best accuracy is: 0.85472
+2023-11-05 11:17:30,267 - Model - INFO - Best inctance avg mIOU is: 0.64997
+2023-11-05 11:17:30,267 - Model - INFO - Epoch 10 (10/240):
+2023-11-05 11:17:30,267 - Model - INFO - Learning rate:0.001000
+2023-11-05 11:22:33,562 - Model - INFO - Train accuracy is: 0.85047705078125 loss is: 0.03981202135980129
+2023-11-05 11:23:36,318 - Model - INFO - eval mIoU of obj            0.531083
+2023-11-05 11:23:36,318 - Model - INFO - Epoch 10 test Accuracy: 0.817926  Inctance avg mIOU: 0.531083
+2023-11-05 11:23:36,318 - Model - INFO - Best accuracy is: 0.85472
+2023-11-05 11:23:36,318 - Model - INFO - Best inctance avg mIOU is: 0.64997
+2023-11-05 11:23:36,318 - Model - INFO - Epoch 11 (11/240):
+2023-11-05 11:23:36,318 - Model - INFO - Learning rate:0.001000
+2023-11-05 11:28:38,718 - Model - INFO - Train accuracy is: 0.8511337890625 loss is: 0.03964510969817638
+2023-11-05 11:29:41,440 - Model - INFO - eval mIoU of obj            0.643583
+2023-11-05 11:29:41,440 - Model - INFO - Epoch 11 test Accuracy: 0.856120  Inctance avg mIOU: 0.643583
+2023-11-05 11:29:41,440 - Model - INFO - Best accuracy is: 0.85612
+2023-11-05 11:29:41,440 - Model - INFO - Best inctance avg mIOU is: 0.64997
+2023-11-05 11:29:41,440 - Model - INFO - Epoch 12 (12/240):
+2023-11-05 11:29:41,440 - Model - INFO - Learning rate:0.001000
+2023-11-05 11:34:42,554 - Model - INFO - Train accuracy is: 0.857636962890625 loss is: 0.03803056652843952
+2023-11-05 11:35:45,318 - Model - INFO - eval mIoU of obj            0.623927
+2023-11-05 11:35:45,318 - Model - INFO - Epoch 12 test Accuracy: 0.857012  Inctance avg mIOU: 0.623927
+2023-11-05 11:35:45,318 - Model - INFO - Best accuracy is: 0.85701
+2023-11-05 11:35:45,318 - Model - INFO - Best inctance avg mIOU is: 0.64997
+2023-11-05 11:35:45,318 - Model - INFO - Epoch 13 (13/240):
+2023-11-05 11:35:45,318 - Model - INFO - Learning rate:0.001000
+2023-11-05 11:40:47,449 - Model - INFO - Train accuracy is: 0.859355712890625 loss is: 0.03770525412261486
+2023-11-05 11:41:50,006 - Model - INFO - eval mIoU of obj            0.627214
+2023-11-05 11:41:50,006 - Model - INFO - Epoch 13 test Accuracy: 0.858328  Inctance avg mIOU: 0.627214
+2023-11-05 11:41:50,006 - Model - INFO - Best accuracy is: 0.85833
+2023-11-05 11:41:50,006 - Model - INFO - Best inctance avg mIOU is: 0.64997
+2023-11-05 11:41:50,006 - Model - INFO - Epoch 14 (14/240):
+2023-11-05 11:41:50,006 - Model - INFO - Learning rate:0.001000
+2023-11-05 11:46:48,095 - Model - INFO - Train accuracy is: 0.863353271484375 loss is: 0.03680717432498932
+2023-11-05 11:47:51,101 - Model - INFO - eval mIoU of obj            0.612612
+2023-11-05 11:47:51,101 - Model - INFO - Epoch 14 test Accuracy: 0.847150  Inctance avg mIOU: 0.612612
+2023-11-05 11:47:51,101 - Model - INFO - Best accuracy is: 0.85833
+2023-11-05 11:47:51,101 - Model - INFO - Best inctance avg mIOU is: 0.64997
+2023-11-05 11:47:51,101 - Model - INFO - Epoch 15 (15/240):
+2023-11-05 11:47:51,101 - Model - INFO - Learning rate:0.001000
+2023-11-05 11:52:55,456 - Model - INFO - Train accuracy is: 0.864780029296875 loss is: 0.03658006744086743
+2023-11-05 11:53:58,250 - Model - INFO - eval mIoU of obj            0.639737
+2023-11-05 11:53:58,250 - Model - INFO - Epoch 15 test Accuracy: 0.859960  Inctance avg mIOU: 0.639737
+2023-11-05 11:53:58,250 - Model - INFO - Best accuracy is: 0.85996
+2023-11-05 11:53:58,250 - Model - INFO - Best inctance avg mIOU is: 0.64997
+2023-11-05 11:53:58,250 - Model - INFO - Epoch 16 (16/240):
+2023-11-05 11:53:58,250 - Model - INFO - Learning rate:0.001000
+2023-11-05 11:59:04,424 - Model - INFO - Train accuracy is: 0.865310546875 loss is: 0.03652391484379768
+2023-11-05 12:00:07,120 - Model - INFO - eval mIoU of obj            0.655576
+2023-11-05 12:00:07,120 - Model - INFO - Epoch 16 test Accuracy: 0.866871  Inctance avg mIOU: 0.655576
+2023-11-05 12:00:07,120 - Model - INFO - Save model...
+2023-11-05 12:00:07,121 - Model - INFO - Saving at log/part_seg/pointnet2_part_seg_msg_custom_4096/checkpoints/best_model.pth
+2023-11-05 12:00:07,172 - Model - INFO - Saving model....
+2023-11-05 12:00:07,172 - Model - INFO - Best accuracy is: 0.86687
+2023-11-05 12:00:07,172 - Model - INFO - Best inctance avg mIOU is: 0.65558
+2023-11-05 12:00:07,172 - Model - INFO - Epoch 17 (17/240):
+2023-11-05 12:00:07,172 - Model - INFO - Learning rate:0.001000
+2023-11-05 12:05:03,349 - Model - INFO - Train accuracy is: 0.8726533203125 loss is: 0.03455004513263702
+2023-11-05 12:06:05,868 - Model - INFO - eval mIoU of obj            0.673796
+2023-11-05 12:06:05,868 - Model - INFO - Epoch 17 test Accuracy: 0.868203  Inctance avg mIOU: 0.673796
+2023-11-05 12:06:05,868 - Model - INFO - Save model...
+2023-11-05 12:06:05,868 - Model - INFO - Saving at log/part_seg/pointnet2_part_seg_msg_custom_4096/checkpoints/best_model.pth
+2023-11-05 12:06:05,916 - Model - INFO - Saving model....
+2023-11-05 12:06:05,916 - Model - INFO - Best accuracy is: 0.86820
+2023-11-05 12:06:05,917 - Model - INFO - Best inctance avg mIOU is: 0.67380
+2023-11-05 12:06:05,917 - Model - INFO - Epoch 18 (18/240):
+2023-11-05 12:06:05,917 - Model - INFO - Learning rate:0.001000
+2023-11-05 12:11:06,413 - Model - INFO - Train accuracy is: 0.872291015625 loss is: 0.03480187985301018
+2023-11-05 12:12:09,098 - Model - INFO - eval mIoU of obj            0.679300
+2023-11-05 12:12:09,098 - Model - INFO - Epoch 18 test Accuracy: 0.873574  Inctance avg mIOU: 0.679300
+2023-11-05 12:12:09,098 - Model - INFO - Save model...
+2023-11-05 12:12:09,098 - Model - INFO - Saving at log/part_seg/pointnet2_part_seg_msg_custom_4096/checkpoints/best_model.pth
+2023-11-05 12:12:09,142 - Model - INFO - Saving model....
+2023-11-05 12:12:09,142 - Model - INFO - Best accuracy is: 0.87357
+2023-11-05 12:12:09,142 - Model - INFO - Best inctance avg mIOU is: 0.67930
+2023-11-05 12:12:09,142 - Model - INFO - Epoch 19 (19/240):
+2023-11-05 12:12:09,142 - Model - INFO - Learning rate:0.001000
+2023-11-05 12:17:10,918 - Model - INFO - Train accuracy is: 0.874080078125 loss is: 0.03436406841874123
+2023-11-05 12:18:13,398 - Model - INFO - eval mIoU of obj            0.665800
+2023-11-05 12:18:13,398 - Model - INFO - Epoch 19 test Accuracy: 0.870654  Inctance avg mIOU: 0.665800
+2023-11-05 12:18:13,398 - Model - INFO - Best accuracy is: 0.87357
+2023-11-05 12:18:13,398 - Model - INFO - Best inctance avg mIOU is: 0.67930
+2023-11-05 12:18:13,398 - Model - INFO - Epoch 20 (20/240):
+2023-11-05 12:18:13,398 - Model - INFO - Learning rate:0.001000
+2023-11-05 12:23:08,880 - Model - INFO - Train accuracy is: 0.874868896484375 loss is: 0.03411991159617901
+2023-11-05 12:24:11,301 - Model - INFO - eval mIoU of obj            0.666247
+2023-11-05 12:24:11,301 - Model - INFO - Epoch 20 test Accuracy: 0.873215  Inctance avg mIOU: 0.666247
+2023-11-05 12:24:11,301 - Model - INFO - Best accuracy is: 0.87357
+2023-11-05 12:24:11,301 - Model - INFO - Best inctance avg mIOU is: 0.67930
+2023-11-05 12:24:11,301 - Model - INFO - Epoch 21 (21/240):
+2023-11-05 12:24:11,301 - Model - INFO - Learning rate:0.001000
+2023-11-05 12:29:09,774 - Model - INFO - Train accuracy is: 0.8768828125 loss is: 0.03356599724292755
+2023-11-05 12:30:12,319 - Model - INFO - eval mIoU of obj            0.695641
+2023-11-05 12:30:12,319 - Model - INFO - Epoch 21 test Accuracy: 0.875968  Inctance avg mIOU: 0.695641
+2023-11-05 12:30:12,319 - Model - INFO - Save model...
+2023-11-05 12:30:12,319 - Model - INFO - Saving at log/part_seg/pointnet2_part_seg_msg_custom_4096/checkpoints/best_model.pth
+2023-11-05 12:30:12,367 - Model - INFO - Saving model....
+2023-11-05 12:30:12,367 - Model - INFO - Best accuracy is: 0.87597
+2023-11-05 12:30:12,367 - Model - INFO - Best inctance avg mIOU is: 0.69564
+2023-11-05 12:30:12,367 - Model - INFO - Epoch 22 (22/240):
+2023-11-05 12:30:12,367 - Model - INFO - Learning rate:0.001000
+2023-11-05 12:35:14,576 - Model - INFO - Train accuracy is: 0.87848388671875 loss is: 0.033031972125172615
+2023-11-05 12:36:16,637 - Model - INFO - eval mIoU of obj            0.693698
+2023-11-05 12:36:16,637 - Model - INFO - Epoch 22 test Accuracy: 0.880464  Inctance avg mIOU: 0.693698
+2023-11-05 12:36:16,637 - Model - INFO - Best accuracy is: 0.88046
+2023-11-05 12:36:16,637 - Model - INFO - Best inctance avg mIOU is: 0.69564
+2023-11-05 12:36:16,637 - Model - INFO - Epoch 23 (23/240):
+2023-11-05 12:36:16,637 - Model - INFO - Learning rate:0.001000
+2023-11-05 12:41:15,997 - Model - INFO - Train accuracy is: 0.8816923828125 loss is: 0.0322592298835516
+2023-11-05 12:42:18,637 - Model - INFO - eval mIoU of obj            0.692740
+2023-11-05 12:42:18,637 - Model - INFO - Epoch 23 test Accuracy: 0.874121  Inctance avg mIOU: 0.692740
+2023-11-05 12:42:18,637 - Model - INFO - Best accuracy is: 0.88046
+2023-11-05 12:42:18,637 - Model - INFO - Best inctance avg mIOU is: 0.69564
+2023-11-05 12:42:18,637 - Model - INFO - Epoch 24 (24/240):
+2023-11-05 12:42:18,637 - Model - INFO - Learning rate:0.001000
+2023-11-05 12:47:24,840 - Model - INFO - Train accuracy is: 0.88127197265625 loss is: 0.032456705927848814
+2023-11-05 12:48:27,511 - Model - INFO - eval mIoU of obj            0.693737
+2023-11-05 12:48:27,511 - Model - INFO - Epoch 24 test Accuracy: 0.878591  Inctance avg mIOU: 0.693737
+2023-11-05 12:48:27,511 - Model - INFO - Best accuracy is: 0.88046
+2023-11-05 12:48:27,511 - Model - INFO - Best inctance avg mIOU is: 0.69564
+2023-11-05 12:48:27,511 - Model - INFO - Epoch 25 (25/240):
+2023-11-05 12:48:27,511 - Model - INFO - Learning rate:0.001000
+2023-11-05 12:53:33,523 - Model - INFO - Train accuracy is: 0.882342529296875 loss is: 0.0321820417791605
+2023-11-05 12:54:35,996 - Model - INFO - eval mIoU of obj            0.678381
+2023-11-05 12:54:35,996 - Model - INFO - Epoch 25 test Accuracy: 0.877148  Inctance avg mIOU: 0.678381
+2023-11-05 12:54:35,996 - Model - INFO - Best accuracy is: 0.88046
+2023-11-05 12:54:35,996 - Model - INFO - Best inctance avg mIOU is: 0.69564
+2023-11-05 12:54:35,996 - Model - INFO - Epoch 26 (26/240):
+2023-11-05 12:54:35,996 - Model - INFO - Learning rate:0.001000
+2023-11-05 12:59:36,538 - Model - INFO - Train accuracy is: 0.881218994140625 loss is: 0.03235601323843002
+2023-11-05 13:00:39,211 - Model - INFO - eval mIoU of obj            0.617695
+2023-11-05 13:00:39,211 - Model - INFO - Epoch 26 test Accuracy: 0.860003  Inctance avg mIOU: 0.617695
+2023-11-05 13:00:39,212 - Model - INFO - Best accuracy is: 0.88046
+2023-11-05 13:00:39,212 - Model - INFO - Best inctance avg mIOU is: 0.69564
+2023-11-05 13:00:39,212 - Model - INFO - Epoch 27 (27/240):
+2023-11-05 13:00:39,212 - Model - INFO - Learning rate:0.001000
+2023-11-05 13:05:36,952 - Model - INFO - Train accuracy is: 0.884600830078125 loss is: 0.03179605560004711
+2023-11-05 13:06:39,414 - Model - INFO - eval mIoU of obj            0.696756
+2023-11-05 13:06:39,415 - Model - INFO - Epoch 27 test Accuracy: 0.882882  Inctance avg mIOU: 0.696756
+2023-11-05 13:06:39,415 - Model - INFO - Save model...
+2023-11-05 13:06:39,415 - Model - INFO - Saving at log/part_seg/pointnet2_part_seg_msg_custom_4096/checkpoints/best_model.pth
+2023-11-05 13:06:39,471 - Model - INFO - Saving model....
+2023-11-05 13:06:39,471 - Model - INFO - Best accuracy is: 0.88288
+2023-11-05 13:06:39,471 - Model - INFO - Best inctance avg mIOU is: 0.69676
+2023-11-05 13:06:39,471 - Model - INFO - Epoch 28 (28/240):
+2023-11-05 13:06:39,471 - Model - INFO - Learning rate:0.001000
+2023-11-05 13:11:46,171 - Model - INFO - Train accuracy is: 0.885870361328125 loss is: 0.031237753450870515
+2023-11-05 13:12:48,664 - Model - INFO - eval mIoU of obj            0.698525
+2023-11-05 13:12:48,664 - Model - INFO - Epoch 28 test Accuracy: 0.876336  Inctance avg mIOU: 0.698525
+2023-11-05 13:12:48,664 - Model - INFO - Save model...
+2023-11-05 13:12:48,664 - Model - INFO - Saving at log/part_seg/pointnet2_part_seg_msg_custom_4096/checkpoints/best_model.pth
+2023-11-05 13:12:48,706 - Model - INFO - Saving model....
+2023-11-05 13:12:48,707 - Model - INFO - Best accuracy is: 0.88288
+2023-11-05 13:12:48,707 - Model - INFO - Best inctance avg mIOU is: 0.69853
+2023-11-05 13:12:48,707 - Model - INFO - Epoch 29 (29/240):
+2023-11-05 13:12:48,707 - Model - INFO - Learning rate:0.001000
+2023-11-05 13:17:55,661 - Model - INFO - Train accuracy is: 0.886669677734375 loss is: 0.031080395206809042
+2023-11-05 13:18:58,284 - Model - INFO - eval mIoU of obj            0.718347
+2023-11-05 13:18:58,284 - Model - INFO - Epoch 29 test Accuracy: 0.888279  Inctance avg mIOU: 0.718347
+2023-11-05 13:18:58,284 - Model - INFO - Save model...
+2023-11-05 13:18:58,284 - Model - INFO - Saving at log/part_seg/pointnet2_part_seg_msg_custom_4096/checkpoints/best_model.pth
+2023-11-05 13:18:58,330 - Model - INFO - Saving model....
+2023-11-05 13:18:58,331 - Model - INFO - Best accuracy is: 0.88828
+2023-11-05 13:18:58,331 - Model - INFO - Best inctance avg mIOU is: 0.71835
+2023-11-05 13:18:58,331 - Model - INFO - Epoch 30 (30/240):
+2023-11-05 13:18:58,331 - Model - INFO - Learning rate:0.001000
+2023-11-05 13:23:57,924 - Model - INFO - Train accuracy is: 0.88814208984375 loss is: 0.03073832696676254
+2023-11-05 13:25:00,667 - Model - INFO - eval mIoU of obj            0.704367
+2023-11-05 13:25:00,667 - Model - INFO - Epoch 30 test Accuracy: 0.884031  Inctance avg mIOU: 0.704367
+2023-11-05 13:25:00,667 - Model - INFO - Best accuracy is: 0.88828
+2023-11-05 13:25:00,667 - Model - INFO - Best inctance avg mIOU is: 0.71835
+2023-11-05 13:25:00,667 - Model - INFO - Epoch 31 (31/240):
+2023-11-05 13:25:00,667 - Model - INFO - Learning rate:0.000500
+2023-11-05 13:29:59,494 - Model - INFO - Train accuracy is: 0.893416748046875 loss is: 0.029287312269210816
+2023-11-05 13:31:02,086 - Model - INFO - eval mIoU of obj            0.691116
+2023-11-05 13:31:02,086 - Model - INFO - Epoch 31 test Accuracy: 0.886356  Inctance avg mIOU: 0.691116
+2023-11-05 13:31:02,086 - Model - INFO - Best accuracy is: 0.88828
+2023-11-05 13:31:02,086 - Model - INFO - Best inctance avg mIOU is: 0.71835
+2023-11-05 13:31:02,086 - Model - INFO - Epoch 32 (32/240):
+2023-11-05 13:31:02,086 - Model - INFO - Learning rate:0.000500
+2023-11-05 13:36:06,450 - Model - INFO - Train accuracy is: 0.893877685546875 loss is: 0.029112733066082
+2023-11-05 13:37:08,788 - Model - INFO - eval mIoU of obj            0.723392
+2023-11-05 13:37:08,788 - Model - INFO - Epoch 32 test Accuracy: 0.891436  Inctance avg mIOU: 0.723392
+2023-11-05 13:37:08,788 - Model - INFO - Save model...
+2023-11-05 13:37:08,788 - Model - INFO - Saving at log/part_seg/pointnet2_part_seg_msg_custom_4096/checkpoints/best_model.pth
+2023-11-05 13:37:08,846 - Model - INFO - Saving model....
+2023-11-05 13:37:08,846 - Model - INFO - Best accuracy is: 0.89144
+2023-11-05 13:37:08,846 - Model - INFO - Best inctance avg mIOU is: 0.72339
+2023-11-05 13:37:08,846 - Model - INFO - Epoch 33 (33/240):
+2023-11-05 13:37:08,846 - Model - INFO - Learning rate:0.000500
+2023-11-05 13:42:12,077 - Model - INFO - Train accuracy is: 0.8944384765625 loss is: 0.02896620261669159
+2023-11-05 13:43:14,762 - Model - INFO - eval mIoU of obj            0.708054
+2023-11-05 13:43:14,762 - Model - INFO - Epoch 33 test Accuracy: 0.888916  Inctance avg mIOU: 0.708054
+2023-11-05 13:43:14,762 - Model - INFO - Best accuracy is: 0.89144
+2023-11-05 13:43:14,762 - Model - INFO - Best inctance avg mIOU is: 0.72339
+2023-11-05 13:43:14,762 - Model - INFO - Epoch 34 (34/240):
+2023-11-05 13:43:14,762 - Model - INFO - Learning rate:0.000500
+2023-11-05 13:48:16,093 - Model - INFO - Train accuracy is: 0.8950419921875 loss is: 0.02878968721628189
+2023-11-05 13:49:18,538 - Model - INFO - eval mIoU of obj            0.726352
+2023-11-05 13:49:18,538 - Model - INFO - Epoch 34 test Accuracy: 0.893895  Inctance avg mIOU: 0.726352
+2023-11-05 13:49:18,538 - Model - INFO - Save model...
+2023-11-05 13:49:18,538 - Model - INFO - Saving at log/part_seg/pointnet2_part_seg_msg_custom_4096/checkpoints/best_model.pth
+2023-11-05 13:49:18,580 - Model - INFO - Saving model....
+2023-11-05 13:49:18,580 - Model - INFO - Best accuracy is: 0.89390
+2023-11-05 13:49:18,580 - Model - INFO - Best inctance avg mIOU is: 0.72635
+2023-11-05 13:49:18,580 - Model - INFO - Epoch 35 (35/240):
+2023-11-05 13:49:18,580 - Model - INFO - Learning rate:0.000500
+2023-11-05 13:54:19,325 - Model - INFO - Train accuracy is: 0.8959814453125 loss is: 0.028569371908903123
+2023-11-05 13:55:21,872 - Model - INFO - eval mIoU of obj            0.707847
+2023-11-05 13:55:21,872 - Model - INFO - Epoch 35 test Accuracy: 0.888513  Inctance avg mIOU: 0.707847
+2023-11-05 13:55:21,872 - Model - INFO - Best accuracy is: 0.89390
+2023-11-05 13:55:21,872 - Model - INFO - Best inctance avg mIOU is: 0.72635
+2023-11-05 13:55:21,872 - Model - INFO - Epoch 36 (36/240):
+2023-11-05 13:55:21,872 - Model - INFO - Learning rate:0.000500
+2023-11-05 14:00:21,400 - Model - INFO - Train accuracy is: 0.8956591796875 loss is: 0.028654105007648468
+2023-11-05 14:01:23,841 - Model - INFO - eval mIoU of obj            0.729000
+2023-11-05 14:01:23,841 - Model - INFO - Epoch 36 test Accuracy: 0.888744  Inctance avg mIOU: 0.729000
+2023-11-05 14:01:23,841 - Model - INFO - Save model...
+2023-11-05 14:01:23,841 - Model - INFO - Saving at log/part_seg/pointnet2_part_seg_msg_custom_4096/checkpoints/best_model.pth
+2023-11-05 14:01:23,883 - Model - INFO - Saving model....
+2023-11-05 14:01:23,883 - Model - INFO - Best accuracy is: 0.89390
+2023-11-05 14:01:23,883 - Model - INFO - Best inctance avg mIOU is: 0.72900
+2023-11-05 14:01:23,883 - Model - INFO - Epoch 37 (37/240):
+2023-11-05 14:01:23,883 - Model - INFO - Learning rate:0.000500
+2023-11-05 14:06:22,527 - Model - INFO - Train accuracy is: 0.8977275390625 loss is: 0.02817286244034767
+2023-11-05 14:07:25,345 - Model - INFO - eval mIoU of obj            0.729913
+2023-11-05 14:07:25,345 - Model - INFO - Epoch 37 test Accuracy: 0.891833  Inctance avg mIOU: 0.729913
+2023-11-05 14:07:25,345 - Model - INFO - Save model...
+2023-11-05 14:07:25,345 - Model - INFO - Saving at log/part_seg/pointnet2_part_seg_msg_custom_4096/checkpoints/best_model.pth
+2023-11-05 14:07:25,389 - Model - INFO - Saving model....
+2023-11-05 14:07:25,389 - Model - INFO - Best accuracy is: 0.89390
+2023-11-05 14:07:25,389 - Model - INFO - Best inctance avg mIOU is: 0.72991
+2023-11-05 14:07:25,389 - Model - INFO - Epoch 38 (38/240):
+2023-11-05 14:07:25,389 - Model - INFO - Learning rate:0.000500
+2023-11-05 14:12:19,395 - Model - INFO - Train accuracy is: 0.89796044921875 loss is: 0.02814567504823208
+2023-11-05 14:13:22,009 - Model - INFO - eval mIoU of obj            0.727061
+2023-11-05 14:13:22,009 - Model - INFO - Epoch 38 test Accuracy: 0.896031  Inctance avg mIOU: 0.727061
+2023-11-05 14:13:22,009 - Model - INFO - Best accuracy is: 0.89603
+2023-11-05 14:13:22,009 - Model - INFO - Best inctance avg mIOU is: 0.72991
+2023-11-05 14:13:22,009 - Model - INFO - Epoch 39 (39/240):
+2023-11-05 14:13:22,009 - Model - INFO - Learning rate:0.000500
+2023-11-05 14:18:19,342 - Model - INFO - Train accuracy is: 0.89856005859375 loss is: 0.027900067150592803
+2023-11-05 14:19:21,614 - Model - INFO - eval mIoU of obj            0.721026
+2023-11-05 14:19:21,614 - Model - INFO - Epoch 39 test Accuracy: 0.892427  Inctance avg mIOU: 0.721026
+2023-11-05 14:19:21,614 - Model - INFO - Best accuracy is: 0.89603
+2023-11-05 14:19:21,614 - Model - INFO - Best inctance avg mIOU is: 0.72991
+2023-11-05 14:19:21,614 - Model - INFO - Epoch 40 (40/240):
+2023-11-05 14:19:21,614 - Model - INFO - Learning rate:0.000500
+2023-11-05 14:24:25,782 - Model - INFO - Train accuracy is: 0.89904638671875 loss is: 0.027761400729417803
+2023-11-05 14:25:31,631 - Model - INFO - eval mIoU of obj            0.733843
+2023-11-05 14:25:31,631 - Model - INFO - Epoch 40 test Accuracy: 0.897641  Inctance avg mIOU: 0.733843
+2023-11-05 14:25:31,631 - Model - INFO - Save model...
+2023-11-05 14:25:31,631 - Model - INFO - Saving at log/part_seg/pointnet2_part_seg_msg_custom_4096/checkpoints/best_model.pth
+2023-11-05 14:25:31,679 - Model - INFO - Saving model....
+2023-11-05 14:25:31,679 - Model - INFO - Best accuracy is: 0.89764
+2023-11-05 14:25:31,679 - Model - INFO - Best inctance avg mIOU is: 0.73384
+2023-11-05 14:25:31,679 - Model - INFO - Epoch 41 (41/240):
+2023-11-05 14:25:31,679 - Model - INFO - Learning rate:0.000500
+2023-11-05 14:30:52,927 - Model - INFO - Train accuracy is: 0.89915380859375 loss is: 0.02782581889629364
+2023-11-05 14:32:03,311 - Model - INFO - eval mIoU of obj            0.729176
+2023-11-05 14:32:03,312 - Model - INFO - Epoch 41 test Accuracy: 0.897330  Inctance avg mIOU: 0.729176
+2023-11-05 14:32:03,312 - Model - INFO - Best accuracy is: 0.89764
+2023-11-05 14:32:03,312 - Model - INFO - Best inctance avg mIOU is: 0.73384
+2023-11-05 14:32:03,312 - Model - INFO - Epoch 42 (42/240):
+2023-11-05 14:32:03,312 - Model - INFO - Learning rate:0.000500
+2023-11-05 14:37:40,579 - Model - INFO - Train accuracy is: 0.899995361328125 loss is: 0.027560845792293547
+2023-11-05 14:38:53,659 - Model - INFO - eval mIoU of obj            0.738807
+2023-11-05 14:38:53,660 - Model - INFO - Epoch 42 test Accuracy: 0.899083  Inctance avg mIOU: 0.738807
+2023-11-05 14:38:53,660 - Model - INFO - Save model...
+2023-11-05 14:38:53,660 - Model - INFO - Saving at log/part_seg/pointnet2_part_seg_msg_custom_4096/checkpoints/best_model.pth
+2023-11-05 14:38:53,713 - Model - INFO - Saving model....
+2023-11-05 14:38:53,713 - Model - INFO - Best accuracy is: 0.89908
+2023-11-05 14:38:53,713 - Model - INFO - Best inctance avg mIOU is: 0.73881
+2023-11-05 14:38:53,713 - Model - INFO - Epoch 43 (43/240):
+2023-11-05 14:38:53,713 - Model - INFO - Learning rate:0.000500
+2023-11-05 14:44:08,924 - Model - INFO - Train accuracy is: 0.900973876953125 loss is: 0.027313931182026862
+2023-11-05 14:45:14,138 - Model - INFO - eval mIoU of obj            0.733554
+2023-11-05 14:45:14,139 - Model - INFO - Epoch 43 test Accuracy: 0.898354  Inctance avg mIOU: 0.733554
+2023-11-05 14:45:14,139 - Model - INFO - Best accuracy is: 0.89908
+2023-11-05 14:45:14,139 - Model - INFO - Best inctance avg mIOU is: 0.73881
+2023-11-05 14:45:14,139 - Model - INFO - Epoch 44 (44/240):
+2023-11-05 14:45:14,139 - Model - INFO - Learning rate:0.000500
+2023-11-05 14:50:25,581 - Model - INFO - Train accuracy is: 0.899915283203125 loss is: 0.027593042597174645
+2023-11-05 14:51:29,406 - Model - INFO - eval mIoU of obj            0.735839
+2023-11-05 14:51:29,406 - Model - INFO - Epoch 44 test Accuracy: 0.898260  Inctance avg mIOU: 0.735839
+2023-11-05 14:51:29,407 - Model - INFO - Best accuracy is: 0.89908
+2023-11-05 14:51:29,407 - Model - INFO - Best inctance avg mIOU is: 0.73881
+2023-11-05 14:51:29,407 - Model - INFO - Epoch 45 (45/240):
+2023-11-05 14:51:29,407 - Model - INFO - Learning rate:0.000500
+2023-11-05 14:56:43,094 - Model - INFO - Train accuracy is: 0.901353759765625 loss is: 0.02716778500378132
+2023-11-05 14:57:47,936 - Model - INFO - eval mIoU of obj            0.744149
+2023-11-05 14:57:47,936 - Model - INFO - Epoch 45 test Accuracy: 0.899369  Inctance avg mIOU: 0.744149
+2023-11-05 14:57:47,936 - Model - INFO - Save model...
+2023-11-05 14:57:47,936 - Model - INFO - Saving at log/part_seg/pointnet2_part_seg_msg_custom_4096/checkpoints/best_model.pth
+2023-11-05 14:57:47,992 - Model - INFO - Saving model....
+2023-11-05 14:57:47,992 - Model - INFO - Best accuracy is: 0.89937
+2023-11-05 14:57:47,992 - Model - INFO - Best inctance avg mIOU is: 0.74415
+2023-11-05 14:57:47,992 - Model - INFO - Epoch 46 (46/240):
+2023-11-05 14:57:47,992 - Model - INFO - Learning rate:0.000500
+2023-11-05 15:03:07,326 - Model - INFO - Train accuracy is: 0.901486572265625 loss is: 0.02714878572523594
+2023-11-05 15:04:10,379 - Model - INFO - eval mIoU of obj            0.744972
+2023-11-05 15:04:10,379 - Model - INFO - Epoch 46 test Accuracy: 0.898299  Inctance avg mIOU: 0.744972
+2023-11-05 15:04:10,379 - Model - INFO - Save model...
+2023-11-05 15:04:10,379 - Model - INFO - Saving at log/part_seg/pointnet2_part_seg_msg_custom_4096/checkpoints/best_model.pth
+2023-11-05 15:04:10,422 - Model - INFO - Saving model....
+2023-11-05 15:04:10,422 - Model - INFO - Best accuracy is: 0.89937
+2023-11-05 15:04:10,423 - Model - INFO - Best inctance avg mIOU is: 0.74497
+2023-11-05 15:04:10,423 - Model - INFO - Epoch 47 (47/240):
+2023-11-05 15:04:10,423 - Model - INFO - Learning rate:0.000500
+2023-11-05 15:09:22,593 - Model - INFO - Train accuracy is: 0.900773681640625 loss is: 0.027288284555077553
+2023-11-05 15:10:25,144 - Model - INFO - eval mIoU of obj            0.719410
+2023-11-05 15:10:25,144 - Model - INFO - Epoch 47 test Accuracy: 0.885627  Inctance avg mIOU: 0.719410
+2023-11-05 15:10:25,144 - Model - INFO - Best accuracy is: 0.89937
+2023-11-05 15:10:25,144 - Model - INFO - Best inctance avg mIOU is: 0.74497
+2023-11-05 15:10:25,144 - Model - INFO - Epoch 48 (48/240):
+2023-11-05 15:10:25,144 - Model - INFO - Learning rate:0.000500
+2023-11-05 15:15:40,618 - Model - INFO - Train accuracy is: 0.901197265625 loss is: 0.027270169496536253
+2023-11-05 15:16:46,312 - Model - INFO - eval mIoU of obj            0.730287
+2023-11-05 15:16:46,312 - Model - INFO - Epoch 48 test Accuracy: 0.897929  Inctance avg mIOU: 0.730287
+2023-11-05 15:16:46,312 - Model - INFO - Best accuracy is: 0.89937
+2023-11-05 15:16:46,312 - Model - INFO - Best inctance avg mIOU is: 0.74497
+2023-11-05 15:16:46,312 - Model - INFO - Epoch 49 (49/240):
+2023-11-05 15:16:46,312 - Model - INFO - Learning rate:0.000500
+2023-11-05 15:22:02,248 - Model - INFO - Train accuracy is: 0.903426513671875 loss is: 0.02659235842525959
+2023-11-05 15:23:06,135 - Model - INFO - eval mIoU of obj            0.715066
+2023-11-05 15:23:06,136 - Model - INFO - Epoch 49 test Accuracy: 0.893827  Inctance avg mIOU: 0.715066
+2023-11-05 15:23:06,136 - Model - INFO - Best accuracy is: 0.89937
+2023-11-05 15:23:06,136 - Model - INFO - Best inctance avg mIOU is: 0.74497
+2023-11-05 15:23:06,136 - Model - INFO - Epoch 50 (50/240):
+2023-11-05 15:23:06,136 - Model - INFO - Learning rate:0.000500
+2023-11-05 15:28:10,278 - Model - INFO - Train accuracy is: 0.90282080078125 loss is: 0.02671469780802727
+2023-11-05 15:29:14,359 - Model - INFO - eval mIoU of obj            0.744058
+2023-11-05 15:29:14,359 - Model - INFO - Epoch 50 test Accuracy: 0.899411  Inctance avg mIOU: 0.744058
+2023-11-05 15:29:14,359 - Model - INFO - Best accuracy is: 0.89941
+2023-11-05 15:29:14,359 - Model - INFO - Best inctance avg mIOU is: 0.74497
+2023-11-05 15:29:14,359 - Model - INFO - Epoch 51 (51/240):
+2023-11-05 15:29:14,359 - Model - INFO - Learning rate:0.000500
+2023-11-05 15:34:22,550 - Model - INFO - Train accuracy is: 0.902943115234375 loss is: 0.026786006569862367
+2023-11-05 15:35:25,887 - Model - INFO - eval mIoU of obj            0.742110
+2023-11-05 15:35:25,888 - Model - INFO - Epoch 51 test Accuracy: 0.897030  Inctance avg mIOU: 0.742110
+2023-11-05 15:35:25,888 - Model - INFO - Best accuracy is: 0.89941
+2023-11-05 15:35:25,888 - Model - INFO - Best inctance avg mIOU is: 0.74497
+2023-11-05 15:35:25,888 - Model - INFO - Epoch 52 (52/240):
+2023-11-05 15:35:25,888 - Model - INFO - Learning rate:0.000500
+2023-11-05 15:40:29,102 - Model - INFO - Train accuracy is: 0.90428125 loss is: 0.02638281102478504
+2023-11-05 15:41:31,622 - Model - INFO - eval mIoU of obj            0.731096
+2023-11-05 15:41:31,622 - Model - INFO - Epoch 52 test Accuracy: 0.888809  Inctance avg mIOU: 0.731096
+2023-11-05 15:41:31,622 - Model - INFO - Best accuracy is: 0.89941
+2023-11-05 15:41:31,622 - Model - INFO - Best inctance avg mIOU is: 0.74497
+2023-11-05 15:41:31,622 - Model - INFO - Epoch 53 (53/240):
+2023-11-05 15:41:31,622 - Model - INFO - Learning rate:0.000500
+2023-11-05 15:46:36,191 - Model - INFO - Train accuracy is: 0.90459326171875 loss is: 0.026228733688592912
+2023-11-05 15:47:41,899 - Model - INFO - eval mIoU of obj            0.734330
+2023-11-05 15:47:41,899 - Model - INFO - Epoch 53 test Accuracy: 0.899788  Inctance avg mIOU: 0.734330
+2023-11-05 15:47:41,899 - Model - INFO - Best accuracy is: 0.89979
+2023-11-05 15:47:41,899 - Model - INFO - Best inctance avg mIOU is: 0.74497
+2023-11-05 15:47:41,899 - Model - INFO - Epoch 54 (54/240):
+2023-11-05 15:47:41,899 - Model - INFO - Learning rate:0.000500
+2023-11-05 15:52:50,730 - Model - INFO - Train accuracy is: 0.904472900390625 loss is: 0.026361163973808287
+2023-11-05 15:53:54,695 - Model - INFO - eval mIoU of obj            0.741145
+2023-11-05 15:53:54,695 - Model - INFO - Epoch 54 test Accuracy: 0.899573  Inctance avg mIOU: 0.741145
+2023-11-05 15:53:54,695 - Model - INFO - Best accuracy is: 0.89979
+2023-11-05 15:53:54,695 - Model - INFO - Best inctance avg mIOU is: 0.74497
+2023-11-05 15:53:54,695 - Model - INFO - Epoch 55 (55/240):
+2023-11-05 15:53:54,695 - Model - INFO - Learning rate:0.000500
+2023-11-05 15:59:03,441 - Model - INFO - Train accuracy is: 0.903453125 loss is: 0.02661003378033638
+2023-11-05 16:00:05,916 - Model - INFO - eval mIoU of obj            0.741433
+2023-11-05 16:00:05,916 - Model - INFO - Epoch 55 test Accuracy: 0.900385  Inctance avg mIOU: 0.741433
+2023-11-05 16:00:05,916 - Model - INFO - Best accuracy is: 0.90039
+2023-11-05 16:00:05,916 - Model - INFO - Best inctance avg mIOU is: 0.74497
+2023-11-05 16:00:05,916 - Model - INFO - Epoch 56 (56/240):
+2023-11-05 16:00:05,916 - Model - INFO - Learning rate:0.000500
+2023-11-05 16:05:04,463 - Model - INFO - Train accuracy is: 0.905311279296875 loss is: 0.02616175492107868
+2023-11-05 16:06:06,999 - Model - INFO - eval mIoU of obj            0.746431
+2023-11-05 16:06:06,999 - Model - INFO - Epoch 56 test Accuracy: 0.903279  Inctance avg mIOU: 0.746431
+2023-11-05 16:06:07,000 - Model - INFO - Save model...
+2023-11-05 16:06:07,000 - Model - INFO - Saving at log/part_seg/pointnet2_part_seg_msg_custom_4096/checkpoints/best_model.pth
+2023-11-05 16:06:07,054 - Model - INFO - Saving model....
+2023-11-05 16:06:07,055 - Model - INFO - Best accuracy is: 0.90328
+2023-11-05 16:06:07,055 - Model - INFO - Best inctance avg mIOU is: 0.74643
+2023-11-05 16:06:07,055 - Model - INFO - Epoch 57 (57/240):
+2023-11-05 16:06:07,055 - Model - INFO - Learning rate:0.000500
+2023-11-05 16:11:03,438 - Model - INFO - Train accuracy is: 0.904818359375 loss is: 0.02625969932973385
+2023-11-05 16:12:06,204 - Model - INFO - eval mIoU of obj            0.737802
+2023-11-05 16:12:06,204 - Model - INFO - Epoch 57 test Accuracy: 0.894371  Inctance avg mIOU: 0.737802
+2023-11-05 16:12:06,204 - Model - INFO - Best accuracy is: 0.90328
+2023-11-05 16:12:06,204 - Model - INFO - Best inctance avg mIOU is: 0.74643
+2023-11-05 16:12:06,204 - Model - INFO - Epoch 58 (58/240):
+2023-11-05 16:12:06,204 - Model - INFO - Learning rate:0.000500
+2023-11-05 16:17:05,997 - Model - INFO - Train accuracy is: 0.90494970703125 loss is: 0.026169349506497384
+2023-11-05 16:18:08,744 - Model - INFO - eval mIoU of obj            0.744307
+2023-11-05 16:18:08,744 - Model - INFO - Epoch 58 test Accuracy: 0.902438  Inctance avg mIOU: 0.744307
+2023-11-05 16:18:08,744 - Model - INFO - Best accuracy is: 0.90328
+2023-11-05 16:18:08,744 - Model - INFO - Best inctance avg mIOU is: 0.74643
+2023-11-05 16:18:08,744 - Model - INFO - Epoch 59 (59/240):
+2023-11-05 16:18:08,744 - Model - INFO - Learning rate:0.000500
+2023-11-05 16:23:18,745 - Model - INFO - Train accuracy is: 0.90539794921875 loss is: 0.0261906366199255
+2023-11-05 16:24:21,388 - Model - INFO - eval mIoU of obj            0.731716
+2023-11-05 16:24:21,388 - Model - INFO - Epoch 59 test Accuracy: 0.899516  Inctance avg mIOU: 0.731716
+2023-11-05 16:24:21,388 - Model - INFO - Best accuracy is: 0.90328
+2023-11-05 16:24:21,388 - Model - INFO - Best inctance avg mIOU is: 0.74643
+2023-11-05 16:24:21,389 - Model - INFO - Epoch 60 (60/240):
+2023-11-05 16:24:21,389 - Model - INFO - Learning rate:0.000500
+2023-11-05 16:29:21,888 - Model - INFO - Train accuracy is: 0.90603759765625 loss is: 0.025987405531108378
+2023-11-05 16:30:24,960 - Model - INFO - eval mIoU of obj            0.748808
+2023-11-05 16:30:24,960 - Model - INFO - Epoch 60 test Accuracy: 0.903053  Inctance avg mIOU: 0.748808
+2023-11-05 16:30:24,960 - Model - INFO - Save model...
+2023-11-05 16:30:24,960 - Model - INFO - Saving at log/part_seg/pointnet2_part_seg_msg_custom_4096/checkpoints/best_model.pth
+2023-11-05 16:30:25,010 - Model - INFO - Saving model....
+2023-11-05 16:30:25,010 - Model - INFO - Best accuracy is: 0.90328
+2023-11-05 16:30:25,010 - Model - INFO - Best inctance avg mIOU is: 0.74881
+2023-11-05 16:30:25,010 - Model - INFO - Epoch 61 (61/240):
+2023-11-05 16:30:25,010 - Model - INFO - Learning rate:0.000250
+2023-11-05 16:35:23,835 - Model - INFO - Train accuracy is: 0.9089248046875 loss is: 0.02514558733999729
+2023-11-05 16:36:26,457 - Model - INFO - eval mIoU of obj            0.758183
+2023-11-05 16:36:26,457 - Model - INFO - Epoch 61 test Accuracy: 0.908016  Inctance avg mIOU: 0.758183
+2023-11-05 16:36:26,457 - Model - INFO - Save model...
+2023-11-05 16:36:26,457 - Model - INFO - Saving at log/part_seg/pointnet2_part_seg_msg_custom_4096/checkpoints/best_model.pth
+2023-11-05 16:36:26,502 - Model - INFO - Saving model....
+2023-11-05 16:36:26,502 - Model - INFO - Best accuracy is: 0.90802
+2023-11-05 16:36:26,502 - Model - INFO - Best inctance avg mIOU is: 0.75818
+2023-11-05 16:36:26,502 - Model - INFO - Epoch 62 (62/240):
+2023-11-05 16:36:26,502 - Model - INFO - Learning rate:0.000250
+2023-11-05 16:41:30,162 - Model - INFO - Train accuracy is: 0.90976513671875 loss is: 0.024927028074860573
+2023-11-05 16:42:33,101 - Model - INFO - eval mIoU of obj            0.745593
+2023-11-05 16:42:33,101 - Model - INFO - Epoch 62 test Accuracy: 0.905158  Inctance avg mIOU: 0.745593
+2023-11-05 16:42:33,101 - Model - INFO - Best accuracy is: 0.90802
+2023-11-05 16:42:33,101 - Model - INFO - Best inctance avg mIOU is: 0.75818
+2023-11-05 16:42:33,101 - Model - INFO - Epoch 63 (63/240):
+2023-11-05 16:42:33,101 - Model - INFO - Learning rate:0.000250
+2023-11-05 16:47:34,649 - Model - INFO - Train accuracy is: 0.909935791015625 loss is: 0.024888906821608544
+2023-11-05 16:48:37,667 - Model - INFO - eval mIoU of obj            0.762523
+2023-11-05 16:48:37,667 - Model - INFO - Epoch 63 test Accuracy: 0.906659  Inctance avg mIOU: 0.762523
+2023-11-05 16:48:37,667 - Model - INFO - Save model...
+2023-11-05 16:48:37,668 - Model - INFO - Saving at log/part_seg/pointnet2_part_seg_msg_custom_4096/checkpoints/best_model.pth
+2023-11-05 16:48:37,710 - Model - INFO - Saving model....
+2023-11-05 16:48:37,710 - Model - INFO - Best accuracy is: 0.90802
+2023-11-05 16:48:37,710 - Model - INFO - Best inctance avg mIOU is: 0.76252
+2023-11-05 16:48:37,710 - Model - INFO - Epoch 64 (64/240):
+2023-11-05 16:48:37,710 - Model - INFO - Learning rate:0.000250
+2023-11-05 16:53:43,095 - Model - INFO - Train accuracy is: 0.9102275390625 loss is: 0.024741468399763107
+2023-11-05 16:54:45,722 - Model - INFO - eval mIoU of obj            0.758741
+2023-11-05 16:54:45,722 - Model - INFO - Epoch 64 test Accuracy: 0.907797  Inctance avg mIOU: 0.758741
+2023-11-05 16:54:45,722 - Model - INFO - Best accuracy is: 0.90802
+2023-11-05 16:54:45,722 - Model - INFO - Best inctance avg mIOU is: 0.76252
+2023-11-05 16:54:45,722 - Model - INFO - Epoch 65 (65/240):
+2023-11-05 16:54:45,722 - Model - INFO - Learning rate:0.000250
+2023-11-05 16:59:53,359 - Model - INFO - Train accuracy is: 0.910360107421875 loss is: 0.02472810946404934
+2023-11-05 17:00:55,859 - Model - INFO - eval mIoU of obj            0.760937
+2023-11-05 17:00:55,859 - Model - INFO - Epoch 65 test Accuracy: 0.908379  Inctance avg mIOU: 0.760937
+2023-11-05 17:00:55,859 - Model - INFO - Best accuracy is: 0.90838
+2023-11-05 17:00:55,859 - Model - INFO - Best inctance avg mIOU is: 0.76252
+2023-11-05 17:00:55,859 - Model - INFO - Epoch 66 (66/240):
+2023-11-05 17:00:55,859 - Model - INFO - Learning rate:0.000250
+2023-11-05 17:05:57,575 - Model - INFO - Train accuracy is: 0.91044091796875 loss is: 0.024722799122333525
+2023-11-05 17:07:00,169 - Model - INFO - eval mIoU of obj            0.758840
+2023-11-05 17:07:00,169 - Model - INFO - Epoch 66 test Accuracy: 0.908537  Inctance avg mIOU: 0.758840
+2023-11-05 17:07:00,169 - Model - INFO - Best accuracy is: 0.90854
+2023-11-05 17:07:00,169 - Model - INFO - Best inctance avg mIOU is: 0.76252
+2023-11-05 17:07:00,169 - Model - INFO - Epoch 67 (67/240):
+2023-11-05 17:07:00,169 - Model - INFO - Learning rate:0.000250
+2023-11-05 17:11:57,654 - Model - INFO - Train accuracy is: 0.910503662109375 loss is: 0.024712237879633902
+2023-11-05 17:13:00,608 - Model - INFO - eval mIoU of obj            0.759745
+2023-11-05 17:13:00,608 - Model - INFO - Epoch 67 test Accuracy: 0.907770  Inctance avg mIOU: 0.759745
+2023-11-05 17:13:00,608 - Model - INFO - Best accuracy is: 0.90854
+2023-11-05 17:13:00,608 - Model - INFO - Best inctance avg mIOU is: 0.76252
+2023-11-05 17:13:00,608 - Model - INFO - Epoch 68 (68/240):
+2023-11-05 17:13:00,609 - Model - INFO - Learning rate:0.000250
+2023-11-05 17:18:02,514 - Model - INFO - Train accuracy is: 0.91059765625 loss is: 0.0246959827542305
+2023-11-05 17:19:05,302 - Model - INFO - eval mIoU of obj            0.743148
+2023-11-05 17:19:05,302 - Model - INFO - Epoch 68 test Accuracy: 0.903575  Inctance avg mIOU: 0.743148
+2023-11-05 17:19:05,302 - Model - INFO - Best accuracy is: 0.90854
+2023-11-05 17:19:05,302 - Model - INFO - Best inctance avg mIOU is: 0.76252
+2023-11-05 17:19:05,302 - Model - INFO - Epoch 69 (69/240):
+2023-11-05 17:19:05,302 - Model - INFO - Learning rate:0.000250
+2023-11-05 17:24:04,836 - Model - INFO - Train accuracy is: 0.91081494140625 loss is: 0.024634458325803278
+2023-11-05 17:25:07,411 - Model - INFO - eval mIoU of obj            0.745794
+2023-11-05 17:25:07,411 - Model - INFO - Epoch 69 test Accuracy: 0.905969  Inctance avg mIOU: 0.745794
+2023-11-05 17:25:07,411 - Model - INFO - Best accuracy is: 0.90854
+2023-11-05 17:25:07,411 - Model - INFO - Best inctance avg mIOU is: 0.76252
+2023-11-05 17:25:07,411 - Model - INFO - Epoch 70 (70/240):
+2023-11-05 17:25:07,411 - Model - INFO - Learning rate:0.000250
+2023-11-05 17:30:05,717 - Model - INFO - Train accuracy is: 0.911115966796875 loss is: 0.02448046848922968
+2023-11-05 17:31:08,525 - Model - INFO - eval mIoU of obj            0.745317
+2023-11-05 17:31:08,525 - Model - INFO - Epoch 70 test Accuracy: 0.905358  Inctance avg mIOU: 0.745317
+2023-11-05 17:31:08,525 - Model - INFO - Best accuracy is: 0.90854
+2023-11-05 17:31:08,525 - Model - INFO - Best inctance avg mIOU is: 0.76252
+2023-11-05 17:31:08,525 - Model - INFO - Epoch 71 (71/240):
+2023-11-05 17:31:08,525 - Model - INFO - Learning rate:0.000250
+2023-11-05 17:36:08,076 - Model - INFO - Train accuracy is: 0.911265869140625 loss is: 0.024462157271802426
+2023-11-05 17:37:10,594 - Model - INFO - eval mIoU of obj            0.746311
+2023-11-05 17:37:10,595 - Model - INFO - Epoch 71 test Accuracy: 0.907305  Inctance avg mIOU: 0.746311
+2023-11-05 17:37:10,595 - Model - INFO - Best accuracy is: 0.90854
+2023-11-05 17:37:10,595 - Model - INFO - Best inctance avg mIOU is: 0.76252
+2023-11-05 17:37:10,595 - Model - INFO - Epoch 72 (72/240):
+2023-11-05 17:37:10,595 - Model - INFO - Learning rate:0.000250
+2023-11-05 17:42:16,548 - Model - INFO - Train accuracy is: 0.911940673828125 loss is: 0.024297681987285612
+2023-11-05 17:43:18,815 - Model - INFO - eval mIoU of obj            0.758628
+2023-11-05 17:43:18,815 - Model - INFO - Epoch 72 test Accuracy: 0.909457  Inctance avg mIOU: 0.758628
+2023-11-05 17:43:18,815 - Model - INFO - Best accuracy is: 0.90946
+2023-11-05 17:43:18,815 - Model - INFO - Best inctance avg mIOU is: 0.76252
+2023-11-05 17:43:18,815 - Model - INFO - Epoch 73 (73/240):
+2023-11-05 17:43:18,815 - Model - INFO - Learning rate:0.000250
+2023-11-05 17:48:20,033 - Model - INFO - Train accuracy is: 0.911708984375 loss is: 0.024295953378081322
+2023-11-05 17:49:22,680 - Model - INFO - eval mIoU of obj            0.763012
+2023-11-05 17:49:22,680 - Model - INFO - Epoch 73 test Accuracy: 0.907328  Inctance avg mIOU: 0.763012
+2023-11-05 17:49:22,680 - Model - INFO - Save model...
+2023-11-05 17:49:22,680 - Model - INFO - Saving at log/part_seg/pointnet2_part_seg_msg_custom_4096/checkpoints/best_model.pth
+2023-11-05 17:49:22,737 - Model - INFO - Saving model....
+2023-11-05 17:49:22,737 - Model - INFO - Best accuracy is: 0.90946
+2023-11-05 17:49:22,737 - Model - INFO - Best inctance avg mIOU is: 0.76301
+2023-11-05 17:49:22,737 - Model - INFO - Epoch 74 (74/240):
+2023-11-05 17:49:22,737 - Model - INFO - Learning rate:0.000250
+2023-11-05 17:54:19,031 - Model - INFO - Train accuracy is: 0.911802978515625 loss is: 0.024335338585078716
+2023-11-05 17:55:22,046 - Model - INFO - eval mIoU of obj            0.760570
+2023-11-05 17:55:22,046 - Model - INFO - Epoch 74 test Accuracy: 0.908861  Inctance avg mIOU: 0.760570
+2023-11-05 17:55:22,046 - Model - INFO - Best accuracy is: 0.90946
+2023-11-05 17:55:22,046 - Model - INFO - Best inctance avg mIOU is: 0.76301
+2023-11-05 17:55:22,046 - Model - INFO - Epoch 75 (75/240):
+2023-11-05 17:55:22,046 - Model - INFO - Learning rate:0.000250
+2023-11-05 18:00:22,276 - Model - INFO - Train accuracy is: 0.912016357421875 loss is: 0.024255958117544652
+2023-11-05 18:01:25,085 - Model - INFO - eval mIoU of obj            0.752317
+2023-11-05 18:01:25,085 - Model - INFO - Epoch 75 test Accuracy: 0.907314  Inctance avg mIOU: 0.752317
+2023-11-05 18:01:25,085 - Model - INFO - Best accuracy is: 0.90946
+2023-11-05 18:01:25,085 - Model - INFO - Best inctance avg mIOU is: 0.76301
+2023-11-05 18:01:25,085 - Model - INFO - Epoch 76 (76/240):
+2023-11-05 18:01:25,085 - Model - INFO - Learning rate:0.000250
+2023-11-05 18:06:23,676 - Model - INFO - Train accuracy is: 0.912327392578125 loss is: 0.024192250564694404
+2023-11-05 18:07:26,076 - Model - INFO - eval mIoU of obj            0.755077
+2023-11-05 18:07:26,076 - Model - INFO - Epoch 76 test Accuracy: 0.903604  Inctance avg mIOU: 0.755077
+2023-11-05 18:07:26,076 - Model - INFO - Best accuracy is: 0.90946
+2023-11-05 18:07:26,077 - Model - INFO - Best inctance avg mIOU is: 0.76301
+2023-11-05 18:07:26,077 - Model - INFO - Epoch 77 (77/240):
+2023-11-05 18:07:26,077 - Model - INFO - Learning rate:0.000250
+2023-11-05 18:12:23,497 - Model - INFO - Train accuracy is: 0.9122138671875 loss is: 0.024272154852747918
+2023-11-05 18:13:26,409 - Model - INFO - eval mIoU of obj            0.755467
+2023-11-05 18:13:26,410 - Model - INFO - Epoch 77 test Accuracy: 0.909006  Inctance avg mIOU: 0.755467
+2023-11-05 18:13:26,410 - Model - INFO - Best accuracy is: 0.90946
+2023-11-05 18:13:26,410 - Model - INFO - Best inctance avg mIOU is: 0.76301
+2023-11-05 18:13:26,410 - Model - INFO - Epoch 78 (78/240):
+2023-11-05 18:13:26,410 - Model - INFO - Learning rate:0.000250
+2023-11-05 18:18:25,435 - Model - INFO - Train accuracy is: 0.912474609375 loss is: 0.024112585976719857
+2023-11-05 18:19:28,285 - Model - INFO - eval mIoU of obj            0.763885
+2023-11-05 18:19:28,285 - Model - INFO - Epoch 78 test Accuracy: 0.910675  Inctance avg mIOU: 0.763885
+2023-11-05 18:19:28,285 - Model - INFO - Save model...
+2023-11-05 18:19:28,285 - Model - INFO - Saving at log/part_seg/pointnet2_part_seg_msg_custom_4096/checkpoints/best_model.pth
+2023-11-05 18:19:28,341 - Model - INFO - Saving model....
+2023-11-05 18:19:28,341 - Model - INFO - Best accuracy is: 0.91068
+2023-11-05 18:19:28,341 - Model - INFO - Best inctance avg mIOU is: 0.76388
+2023-11-05 18:19:28,341 - Model - INFO - Epoch 79 (79/240):
+2023-11-05 18:19:28,341 - Model - INFO - Learning rate:0.000250
+2023-11-05 18:24:23,466 - Model - INFO - Train accuracy is: 0.912585693359375 loss is: 0.024186762928962706
+2023-11-05 18:25:26,155 - Model - INFO - eval mIoU of obj            0.754704
+2023-11-05 18:25:26,155 - Model - INFO - Epoch 79 test Accuracy: 0.907315  Inctance avg mIOU: 0.754704
+2023-11-05 18:25:26,155 - Model - INFO - Best accuracy is: 0.91068
+2023-11-05 18:25:26,155 - Model - INFO - Best inctance avg mIOU is: 0.76388
+2023-11-05 18:25:26,155 - Model - INFO - Epoch 80 (80/240):
+2023-11-05 18:25:26,155 - Model - INFO - Learning rate:0.000250
+2023-11-05 18:30:22,237 - Model - INFO - Train accuracy is: 0.91290673828125 loss is: 0.024017963342368602
+2023-11-05 18:31:24,797 - Model - INFO - eval mIoU of obj            0.766101
+2023-11-05 18:31:24,797 - Model - INFO - Epoch 80 test Accuracy: 0.910985  Inctance avg mIOU: 0.766101
+2023-11-05 18:31:24,797 - Model - INFO - Save model...
+2023-11-05 18:31:24,797 - Model - INFO - Saving at log/part_seg/pointnet2_part_seg_msg_custom_4096/checkpoints/best_model.pth
+2023-11-05 18:31:24,845 - Model - INFO - Saving model....
+2023-11-05 18:31:24,845 - Model - INFO - Best accuracy is: 0.91099
+2023-11-05 18:31:24,845 - Model - INFO - Best inctance avg mIOU is: 0.76610
+2023-11-05 18:31:24,845 - Model - INFO - Epoch 81 (81/240):
+2023-11-05 18:31:24,845 - Model - INFO - Learning rate:0.000250
+2023-11-05 18:36:30,166 - Model - INFO - Train accuracy is: 0.912870361328125 loss is: 0.024124019131064416
+2023-11-05 18:37:32,418 - Model - INFO - eval mIoU of obj            0.758539
+2023-11-05 18:37:32,418 - Model - INFO - Epoch 81 test Accuracy: 0.910055  Inctance avg mIOU: 0.758539
+2023-11-05 18:37:32,418 - Model - INFO - Best accuracy is: 0.91099
+2023-11-05 18:37:32,418 - Model - INFO - Best inctance avg mIOU is: 0.76610
+2023-11-05 18:37:32,418 - Model - INFO - Epoch 82 (82/240):
+2023-11-05 18:37:32,418 - Model - INFO - Learning rate:0.000250
+2023-11-05 18:42:31,779 - Model - INFO - Train accuracy is: 0.912685791015625 loss is: 0.024105334416031837
+2023-11-05 18:43:34,625 - Model - INFO - eval mIoU of obj            0.762780
+2023-11-05 18:43:34,626 - Model - INFO - Epoch 82 test Accuracy: 0.908996  Inctance avg mIOU: 0.762780
+2023-11-05 18:43:34,626 - Model - INFO - Best accuracy is: 0.91099
+2023-11-05 18:43:34,626 - Model - INFO - Best inctance avg mIOU is: 0.76610
+2023-11-05 18:43:34,626 - Model - INFO - Epoch 83 (83/240):
+2023-11-05 18:43:34,626 - Model - INFO - Learning rate:0.000250
+2023-11-05 18:48:35,560 - Model - INFO - Train accuracy is: 0.91328857421875 loss is: 0.02393764491379261
+2023-11-05 18:49:38,076 - Model - INFO - eval mIoU of obj            0.768651
+2023-11-05 18:49:38,076 - Model - INFO - Epoch 83 test Accuracy: 0.910109  Inctance avg mIOU: 0.768651
+2023-11-05 18:49:38,076 - Model - INFO - Save model...
+2023-11-05 18:49:38,076 - Model - INFO - Saving at log/part_seg/pointnet2_part_seg_msg_custom_4096/checkpoints/best_model.pth
+2023-11-05 18:49:38,127 - Model - INFO - Saving model....
+2023-11-05 18:49:38,127 - Model - INFO - Best accuracy is: 0.91099
+2023-11-05 18:49:38,127 - Model - INFO - Best inctance avg mIOU is: 0.76865
+2023-11-05 18:49:38,127 - Model - INFO - Epoch 84 (84/240):
+2023-11-05 18:49:38,127 - Model - INFO - Learning rate:0.000250
+2023-11-05 18:54:34,141 - Model - INFO - Train accuracy is: 0.913484619140625 loss is: 0.023900925897061824
+2023-11-05 18:55:37,213 - Model - INFO - eval mIoU of obj            0.741326
+2023-11-05 18:55:37,213 - Model - INFO - Epoch 84 test Accuracy: 0.905497  Inctance avg mIOU: 0.741326
+2023-11-05 18:55:37,213 - Model - INFO - Best accuracy is: 0.91099
+2023-11-05 18:55:37,213 - Model - INFO - Best inctance avg mIOU is: 0.76865
+2023-11-05 18:55:37,213 - Model - INFO - Epoch 85 (85/240):
+2023-11-05 18:55:37,213 - Model - INFO - Learning rate:0.000250
+2023-11-05 19:00:33,424 - Model - INFO - Train accuracy is: 0.91290234375 loss is: 0.024099634632468222
+2023-11-05 19:01:36,072 - Model - INFO - eval mIoU of obj            0.751088
+2023-11-05 19:01:36,072 - Model - INFO - Epoch 85 test Accuracy: 0.906258  Inctance avg mIOU: 0.751088
+2023-11-05 19:01:36,073 - Model - INFO - Best accuracy is: 0.91099
+2023-11-05 19:01:36,073 - Model - INFO - Best inctance avg mIOU is: 0.76865
+2023-11-05 19:01:36,073 - Model - INFO - Epoch 86 (86/240):
+2023-11-05 19:01:36,073 - Model - INFO - Learning rate:0.000250
+2023-11-05 19:06:36,213 - Model - INFO - Train accuracy is: 0.913603271484375 loss is: 0.02387706045806408
+2023-11-05 19:07:38,568 - Model - INFO - eval mIoU of obj            0.766575
+2023-11-05 19:07:38,568 - Model - INFO - Epoch 86 test Accuracy: 0.911475  Inctance avg mIOU: 0.766575
+2023-11-05 19:07:38,568 - Model - INFO - Best accuracy is: 0.91147
+2023-11-05 19:07:38,568 - Model - INFO - Best inctance avg mIOU is: 0.76865
+2023-11-05 19:07:38,568 - Model - INFO - Epoch 87 (87/240):
+2023-11-05 19:07:38,568 - Model - INFO - Learning rate:0.000250
+2023-11-05 19:12:51,131 - Model - INFO - Train accuracy is: 0.913615966796875 loss is: 0.02390778733789921
+2023-11-05 19:13:53,646 - Model - INFO - eval mIoU of obj            0.765998
+2023-11-05 19:13:53,646 - Model - INFO - Epoch 87 test Accuracy: 0.910576  Inctance avg mIOU: 0.765998
+2023-11-05 19:13:53,646 - Model - INFO - Best accuracy is: 0.91147
+2023-11-05 19:13:53,646 - Model - INFO - Best inctance avg mIOU is: 0.76865
+2023-11-05 19:13:53,646 - Model - INFO - Epoch 88 (88/240):
+2023-11-05 19:13:53,646 - Model - INFO - Learning rate:0.000250
+2023-11-05 19:18:51,767 - Model - INFO - Train accuracy is: 0.913749267578125 loss is: 0.023837742120027542
+2023-11-05 19:19:54,098 - Model - INFO - eval mIoU of obj            0.742689
+2023-11-05 19:19:54,099 - Model - INFO - Epoch 88 test Accuracy: 0.904736  Inctance avg mIOU: 0.742689
+2023-11-05 19:19:54,099 - Model - INFO - Best accuracy is: 0.91147
+2023-11-05 19:19:54,099 - Model - INFO - Best inctance avg mIOU is: 0.76865
+2023-11-05 19:19:54,099 - Model - INFO - Epoch 89 (89/240):
+2023-11-05 19:19:54,099 - Model - INFO - Learning rate:0.000250
+2023-11-05 19:24:55,817 - Model - INFO - Train accuracy is: 0.913883056640625 loss is: 0.02377059465646744
+2023-11-05 19:25:58,432 - Model - INFO - eval mIoU of obj            0.756883
+2023-11-05 19:25:58,432 - Model - INFO - Epoch 89 test Accuracy: 0.909529  Inctance avg mIOU: 0.756883
+2023-11-05 19:25:58,432 - Model - INFO - Best accuracy is: 0.91147
+2023-11-05 19:25:58,432 - Model - INFO - Best inctance avg mIOU is: 0.76865
+2023-11-05 19:25:58,432 - Model - INFO - Epoch 90 (90/240):
+2023-11-05 19:25:58,432 - Model - INFO - Learning rate:0.000250
+2023-11-05 19:31:07,336 - Model - INFO - Train accuracy is: 0.914264892578125 loss is: 0.02366986355185509
+2023-11-05 19:32:09,646 - Model - INFO - eval mIoU of obj            0.739206
+2023-11-05 19:32:09,647 - Model - INFO - Epoch 90 test Accuracy: 0.905796  Inctance avg mIOU: 0.739206
+2023-11-05 19:32:09,647 - Model - INFO - Best accuracy is: 0.91147
+2023-11-05 19:32:09,647 - Model - INFO - Best inctance avg mIOU is: 0.76865
+2023-11-05 19:32:09,647 - Model - INFO - Epoch 91 (91/240):
+2023-11-05 19:32:09,647 - Model - INFO - Learning rate:0.000125
+2023-11-05 19:37:07,829 - Model - INFO - Train accuracy is: 0.91551513671875 loss is: 0.023342085897922516
+2023-11-05 19:38:10,433 - Model - INFO - eval mIoU of obj            0.771680
+2023-11-05 19:38:10,433 - Model - INFO - Epoch 91 test Accuracy: 0.913471  Inctance avg mIOU: 0.771680
+2023-11-05 19:38:10,433 - Model - INFO - Save model...
+2023-11-05 19:38:10,433 - Model - INFO - Saving at log/part_seg/pointnet2_part_seg_msg_custom_4096/checkpoints/best_model.pth
+2023-11-05 19:38:10,484 - Model - INFO - Saving model....
+2023-11-05 19:38:10,484 - Model - INFO - Best accuracy is: 0.91347
+2023-11-05 19:38:10,484 - Model - INFO - Best inctance avg mIOU is: 0.77168
+2023-11-05 19:38:10,484 - Model - INFO - Epoch 92 (92/240):
+2023-11-05 19:38:10,484 - Model - INFO - Learning rate:0.000125
+2023-11-05 19:43:07,188 - Model - INFO - Train accuracy is: 0.915839599609375 loss is: 0.02329980108141899
+2023-11-05 19:44:09,692 - Model - INFO - eval mIoU of obj            0.771496
+2023-11-05 19:44:09,692 - Model - INFO - Epoch 92 test Accuracy: 0.913901  Inctance avg mIOU: 0.771496
+2023-11-05 19:44:09,692 - Model - INFO - Best accuracy is: 0.91390
+2023-11-05 19:44:09,692 - Model - INFO - Best inctance avg mIOU is: 0.77168
+2023-11-05 19:44:09,692 - Model - INFO - Epoch 93 (93/240):
+2023-11-05 19:44:09,692 - Model - INFO - Learning rate:0.000125
+2023-11-05 19:49:12,380 - Model - INFO - Train accuracy is: 0.91606787109375 loss is: 0.02320498277246952
+2023-11-05 19:50:14,612 - Model - INFO - eval mIoU of obj            0.766957
+2023-11-05 19:50:14,612 - Model - INFO - Epoch 93 test Accuracy: 0.909290  Inctance avg mIOU: 0.766957
+2023-11-05 19:50:14,612 - Model - INFO - Best accuracy is: 0.91390
+2023-11-05 19:50:14,612 - Model - INFO - Best inctance avg mIOU is: 0.77168
+2023-11-05 19:50:14,612 - Model - INFO - Epoch 94 (94/240):
+2023-11-05 19:50:14,612 - Model - INFO - Learning rate:0.000125
+2023-11-05 19:55:13,381 - Model - INFO - Train accuracy is: 0.916382080078125 loss is: 0.023124502003192902
+2023-11-05 19:56:16,001 - Model - INFO - eval mIoU of obj            0.774311
+2023-11-05 19:56:16,001 - Model - INFO - Epoch 94 test Accuracy: 0.914287  Inctance avg mIOU: 0.774311
+2023-11-05 19:56:16,001 - Model - INFO - Save model...
+2023-11-05 19:56:16,001 - Model - INFO - Saving at log/part_seg/pointnet2_part_seg_msg_custom_4096/checkpoints/best_model.pth
+2023-11-05 19:56:16,052 - Model - INFO - Saving model....
+2023-11-05 19:56:16,052 - Model - INFO - Best accuracy is: 0.91429
+2023-11-05 19:56:16,052 - Model - INFO - Best inctance avg mIOU is: 0.77431
+2023-11-05 19:56:16,052 - Model - INFO - Epoch 95 (95/240):
+2023-11-05 19:56:16,052 - Model - INFO - Learning rate:0.000125
+2023-11-05 20:01:14,901 - Model - INFO - Train accuracy is: 0.91633203125 loss is: 0.023089112937450407
+2023-11-05 20:02:17,377 - Model - INFO - eval mIoU of obj            0.751130
+2023-11-05 20:02:17,377 - Model - INFO - Epoch 95 test Accuracy: 0.908974  Inctance avg mIOU: 0.751130
+2023-11-05 20:02:17,377 - Model - INFO - Best accuracy is: 0.91429
+2023-11-05 20:02:17,377 - Model - INFO - Best inctance avg mIOU is: 0.77431
+2023-11-05 20:02:17,377 - Model - INFO - Epoch 96 (96/240):
+2023-11-05 20:02:17,377 - Model - INFO - Learning rate:0.000125
+2023-11-05 20:07:12,256 - Model - INFO - Train accuracy is: 0.916775146484375 loss is: 0.02299956055730581
+2023-11-05 20:08:14,986 - Model - INFO - eval mIoU of obj            0.772022
+2023-11-05 20:08:14,986 - Model - INFO - Epoch 96 test Accuracy: 0.913957  Inctance avg mIOU: 0.772022
+2023-11-05 20:08:14,986 - Model - INFO - Best accuracy is: 0.91429
+2023-11-05 20:08:14,986 - Model - INFO - Best inctance avg mIOU is: 0.77431
+2023-11-05 20:08:14,986 - Model - INFO - Epoch 97 (97/240):
+2023-11-05 20:08:14,986 - Model - INFO - Learning rate:0.000125
+2023-11-05 20:13:15,711 - Model - INFO - Train accuracy is: 0.91678662109375 loss is: 0.022960214421153067
+2023-11-05 20:14:18,201 - Model - INFO - eval mIoU of obj            0.773141
+2023-11-05 20:14:18,201 - Model - INFO - Epoch 97 test Accuracy: 0.913806  Inctance avg mIOU: 0.773141
+2023-11-05 20:14:18,201 - Model - INFO - Best accuracy is: 0.91429
+2023-11-05 20:14:18,201 - Model - INFO - Best inctance avg mIOU is: 0.77431
+2023-11-05 20:14:18,201 - Model - INFO - Epoch 98 (98/240):
+2023-11-05 20:14:18,201 - Model - INFO - Learning rate:0.000125
+2023-11-05 20:20:32,903 - Model - INFO - Train accuracy is: 0.9166416015625 loss is: 0.023025405414402483
+2023-11-05 20:22:07,282 - Model - INFO - eval mIoU of obj            0.769255
+2023-11-05 20:22:07,283 - Model - INFO - Epoch 98 test Accuracy: 0.914326  Inctance avg mIOU: 0.769255
+2023-11-05 20:22:07,283 - Model - INFO - Best accuracy is: 0.91433
+2023-11-05 20:22:07,283 - Model - INFO - Best inctance avg mIOU is: 0.77431
+2023-11-05 20:22:07,283 - Model - INFO - Epoch 99 (99/240):
+2023-11-05 20:22:07,283 - Model - INFO - Learning rate:0.000125
+2023-11-05 20:29:24,773 - Model - INFO - Train accuracy is: 0.916841796875 loss is: 0.023018104285001756
+2023-11-05 20:31:02,923 - Model - INFO - eval mIoU of obj            0.772237
+2023-11-05 20:31:02,923 - Model - INFO - Epoch 99 test Accuracy: 0.914188  Inctance avg mIOU: 0.772237
+2023-11-05 20:31:02,923 - Model - INFO - Best accuracy is: 0.91433
+2023-11-05 20:31:02,923 - Model - INFO - Best inctance avg mIOU is: 0.77431
+2023-11-05 20:31:02,923 - Model - INFO - Epoch 100 (100/240):
+2023-11-05 20:31:02,923 - Model - INFO - Learning rate:0.000125
