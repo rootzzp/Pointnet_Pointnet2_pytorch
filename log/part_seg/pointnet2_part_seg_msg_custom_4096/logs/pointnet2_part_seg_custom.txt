@@ -794,3 +794,11 @@
 2023-11-05 20:31:02,923 - Model - INFO - Best inctance avg mIOU is: 0.77431
 2023-11-05 20:31:02,923 - Model - INFO - Epoch 100 (100/240):
 2023-11-05 20:31:02,923 - Model - INFO - Learning rate:0.000125
+2023-11-06 19:59:33,569 - Model - INFO - PARAMETER ...
+2023-11-06 19:59:33,569 - Model - INFO - Namespace(batch_size=8, decay_rate=0.0001, epoch=240, gpu='0', learning_rate=0.001, log_dir='pointnet2_part_seg_msg_custom_4096', lr_decay=0.5, model='pointnet2_part_seg_custom', normal=True, npoint=4096, optimizer='Adam', step_size=30)
+2023-11-06 19:59:33,681 - Model - INFO - The number of training data is: 1000
+2023-11-06 19:59:33,681 - Model - INFO - The number of test data is: 190
+2023-11-06 19:59:35,880 - Model - INFO - Use pretrain model
+2023-11-06 19:59:35,880 - Model - INFO - Epoch 1 (94/240):
+2023-11-06 19:59:35,880 - Model - INFO - Learning rate:0.000125
+2023-11-06 20:04:38,022 - Model - INFO - Train accuracy is: 0.91640625 loss is: 0.023170216538012028

@@ -139,16 +139,16 @@ def get_down_sample_edge(ratio=0.1):
 if __name__ == "__main__":
 
     # first
-    # files = os.listdir('./data/custom/txt/')
-    # for file in files:
-    #     path = os.path.join('./data/custom/txt/',file)
-    #     save_path = os.path.join('./data/custom/pcds/',file[:-4]+".pcd")
-    #     txt_to_pcd(path,save_path)
+    files = os.listdir('./data/custom/txt/')
+    for file in files:
+        path = os.path.join('./data/custom/txt/',file)
+        save_path = os.path.join('./data/custom/pcds/',file[:-4]+".pcd")
+        txt_to_pcd(path,save_path)
 
     # second
-    edge_file = os.path.join('./data/custom/pcds',"edge.pcd")
-    save_fold = './data/custom/edges'
-    generate_edge(edge_file,save_fold=save_fold,count=1000)
+    # edge_file = os.path.join('./data/custom/pcds',"edge.pcd")
+    # save_fold = './data/custom/edges'
+    # generate_edge(edge_file,save_fold=save_fold,count=1000)
 
     # maybe
     # get_down_sample_edge()
